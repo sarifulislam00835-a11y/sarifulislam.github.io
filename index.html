@@ -49,17 +49,27 @@ padding:15px;
 margin-top:30px;
 }
 nav{
-background:#444;
-padding:15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#111827;
+    padding:18px 0;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-weight:bold;
+    transition:0.3s;
+    padding:8px 12px;
+    border-radius:6px;
+}
 
 nav a:hover{
-color:#ffd700;
+    background:#2563eb;
+    color:white;
 }
   
 font-weight:bold;
