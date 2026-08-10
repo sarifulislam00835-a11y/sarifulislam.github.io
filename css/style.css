@@ -798,3 +798,129 @@ a {
     </div>
 
 </section>
+/* =========================================
+   STEP 7B — PREMIUM ARTICLES SECTION
+========================================= */
+
+.articles-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 6%;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.article-card {
+    position: relative;
+    padding: 32px;
+
+    min-height: 310px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(56, 189, 248, 0.3);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.article-meta span:first-child {
+    color: rgba(56, 189, 248, 0.6);
+    font-size: 22px;
+}
+
+.article-card h3 {
+    margin-bottom: 16px;
+
+    color: #f8fafc;
+
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.article-card > p {
+    margin-bottom: 25px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.article-link {
+    margin-top: auto;
+
+    color: #38bdf8;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: transform 0.3s ease;
+}
+
+.article-link:hover {
+    transform: translateX(6px);
+}
+
+.articles-more {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .articles-section {
+        padding: 90px 20px;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-card {
+        min-height: 280px;
+    }
+}
