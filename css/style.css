@@ -924,3 +924,207 @@ a {
         min-height: 280px;
     }
 }
+/* =========================================
+   STEP 8B — SARIF AI PREMIUM DESIGN
+========================================= */
+
+.ai-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 120px 6%;
+}
+
+.ai-container {
+    overflow: hidden;
+
+    border: 1px solid rgba(56, 189, 248, 0.18);
+    border-radius: 26px;
+
+    background: rgba(15, 23, 42, 0.75);
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.ai-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 22px 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ai-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #2563eb;
+
+    color: white;
+    font-size: 22px;
+}
+
+.ai-header h3 {
+    margin: 0;
+
+    color: #f8fafc;
+    font-size: 18px;
+}
+
+.ai-header p {
+    margin: 3px 0 0;
+
+    color: #64748b;
+    font-size: 12px;
+}
+
+.ai-status {
+    margin-left: auto;
+
+    color: #4ade80;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ai-message {
+    display: flex;
+    gap: 15px;
+
+    padding: 35px 25px;
+}
+
+.ai-avatar {
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #1e3a8a;
+
+    color: white;
+    font-weight: 800;
+}
+
+.ai-bubble {
+    max-width: 650px;
+
+    padding: 16px 20px;
+
+    border-radius: 4px 18px 18px 18px;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.ai-bubble p {
+    margin: 0;
+
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.ai-input-area {
+    display: flex;
+    gap: 10px;
+
+    padding: 20px 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ai-input-area input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 15px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.ai-input-area input::placeholder {
+    color: #64748b;
+}
+
+.ai-input-area input:focus {
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+.ai-input-area button {
+    padding: 0 22px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.ai-input-area button:hover {
+    background: #3b82f6;
+    transform: translateY(-2px);
+}
+
+.ai-note {
+    margin: 0;
+    padding: 0 25px 20px;
+
+    color: #475569;
+
+    font-size: 11px;
+    text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .ai-section {
+        padding: 90px 20px;
+    }
+
+    .ai-input-area {
+        flex-direction: column;
+    }
+
+    .ai-input-area button {
+        min-height: 48px;
+    }
+
+    .ai-header {
+        padding: 18px;
+    }
+
+    .ai-message {
+        padding: 25px 18px;
+    }
+}
