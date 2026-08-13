@@ -15,9 +15,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f6f7fb;
+    background: #f5f7fb;
     color: #172033;
 }
+
+/* NAVBAR */
 
 .navbar {
     background: #ffffff;
@@ -31,7 +33,7 @@ body {
 .logo {
     text-decoration: none;
     color: #172033;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 700;
 }
 
@@ -44,9 +46,11 @@ body {
     color: #172033;
 }
 
+/* HERO */
+
 .hero {
     text-align: center;
-    padding: 70px 20px 45px;
+    padding: 65px 20px 40px;
 }
 
 .label {
@@ -67,17 +71,21 @@ body {
 }
 
 .hero p {
-    max-width: 700px;
+    max-width: 720px;
     margin: auto;
     color: #64748b;
     line-height: 1.7;
 }
 
+/* MAIN */
+
 .hub {
-    max-width: 1000px;
-    margin: 0 auto 70px;
-    padding: 0 20px;
+    max-width: 1050px;
+    margin: auto;
+    padding: 0 20px 70px;
 }
+
+/* SEARCH */
 
 .search-box {
     background: white;
@@ -85,6 +93,12 @@ body {
     border-radius: 18px;
     box-shadow: 0 5px 25px rgba(0,0,0,.08);
     margin-bottom: 25px;
+}
+
+.search-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .search-box input {
@@ -100,6 +114,8 @@ body {
     border-color: #2563eb;
 }
 
+/* RESOURCE TYPE */
+
 .options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -109,7 +125,7 @@ body {
 .option-card {
     background: white;
     padding: 30px;
-    border-radius: 16px;
+    border-radius: 17px;
     text-align: center;
     cursor: pointer;
     border: 1px solid #e8ebf0;
@@ -121,8 +137,12 @@ body {
     box-shadow: 0 8px 25px rgba(0,0,0,.08);
 }
 
+.option-card.active {
+    border: 2px solid #2563eb;
+}
+
 .option-card .icon {
-    font-size: 35px;
+    font-size: 36px;
     margin-bottom: 12px;
 }
 
@@ -135,6 +155,8 @@ body {
     font-size: 14px;
 }
 
+/* PANELS */
+
 .panel {
     background: white;
     margin-top: 25px;
@@ -144,13 +166,20 @@ body {
 }
 
 .panel h2 {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .select-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+}
+
+.field label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
 }
 
 select {
@@ -162,31 +191,51 @@ select {
     font-size: 15px;
 }
 
+/* RESULTS */
+
 .results {
-    margin-top: 25px;
+    margin-top: 28px;
+}
+
+.result-count {
+    color: #64748b;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .paper {
     border: 1px solid #e2e8f0;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 13px;
     margin-bottom: 15px;
+    background: #ffffff;
 }
 
 .paper h3 {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .paper-info {
     color: #64748b;
     font-size: 14px;
+    line-height: 1.8;
     margin-bottom: 15px;
+}
+
+.paper-code {
+    display: inline-block;
+    background: #eef4ff;
+    color: #2563eb;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .paper-buttons a {
     display: inline-block;
     text-decoration: none;
-    padding: 9px 14px;
+    padding: 10px 15px;
     border-radius: 7px;
     margin-right: 8px;
     font-size: 14px;
@@ -202,9 +251,19 @@ select {
     color: #2563eb;
 }
 
+.no-result {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+}
+
 .hidden {
     display: none;
 }
+
+/* FOOTER */
 
 footer {
     text-align: center;
@@ -213,20 +272,33 @@ footer {
     font-size: 14px;
 }
 
+/* MOBILE */
+
 @media(max-width:650px) {
+
     .options,
     .select-grid {
         grid-template-columns: 1fr;
     }
 
+    .navbar {
+        padding: 16px 20px;
+    }
+
     .hero {
         padding-top: 45px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
     }
 }
 </style>
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -240,6 +312,9 @@ footer {
 
 </nav>
 
+
+<!-- HERO -->
+
 <section class="hero">
 
     <p class="label">NEP STUDY HUB</p>
@@ -250,175 +325,654 @@ footer {
     </h1>
 
     <p>
-        Find previous year question papers quickly by university,
-        department, course, semester, paper code and year.
+        Find previous-year question papers by university,
+        department, course, semester, paper code, subject and year.
     </p>
 
 </section>
 
+
 <main class="hub">
 
-    <div class="search-box">
 
-        <input
-            type="search"
-            id="paperSearch"
-            placeholder="🔍 Search by paper title or paper code..."
-        >
+<!-- SEARCH -->
+
+<div class="search-box">
+
+    <label for="paperSearch">
+        🔍 Search Question Papers
+    </label>
+
+    <input
+        type="search"
+        id="paperSearch"
+        placeholder="Search by paper title or paper code..."
+    >
+
+</div>
+
+
+<!-- UNIVERSITY / BOARDS -->
+
+<div class="options">
+
+    <div
+        class="option-card"
+        id="universityCard"
+        onclick="showUniversity()"
+    >
+
+        <div class="icon">🎓</div>
+
+        <h3>University</h3>
+
+        <p>
+            University previous-year question papers
+            and semester-wise resources.
+        </p>
 
     </div>
 
-    <div class="options">
 
-        <div class="option-card" onclick="showUniversity()">
+    <div
+        class="option-card"
+        id="boardsCard"
+        onclick="showBoards()"
+    >
 
-            <div class="icon">🎓</div>
+        <div class="icon">🏫</div>
 
-            <h3>University</h3>
+        <h3>Boards</h3>
 
-            <p>
-                University question papers,
-                semester-wise resources and more.
-            </p>
-
-        </div>
-
-        <div class="option-card" onclick="showBoards()">
-
-            <div class="icon">🏫</div>
-
-            <h3>Boards</h3>
-
-            <p>
-                Class 10 & 12 board question papers
-                and study resources.
-            </p>
-
-        </div>
+        <p>
+            Class 10 and Class 12 board question papers
+            and study resources.
+        </p>
 
     </div>
 
-    <!-- UNIVERSITY -->
+</div>
 
-    <div id="universityPanel" class="panel hidden">
 
-        <h2>🎓 University Resources</h2>
+<!-- UNIVERSITY PANEL -->
 
-        <div class="select-grid">
+<div id="universityPanel" class="panel hidden">
+
+    <h2>🎓 University Question Papers</h2>
+
+    <div class="select-grid">
+
+
+        <div class="field">
+
+            <label>University</label>
 
             <select id="university">
-                <option value="">Select University</option>
-                <option value="bodoland">Bodoland University</option>
+
+                <option value="">All Universities</option>
+
+                <option value="Bodoland University">
+                    Bodoland University
+                </option>
+
             </select>
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Department</label>
 
             <select id="department">
-                <option value="">Select Department</option>
-                <option>Physics</option>
-                <option>Chemistry</option>
-                <option>Mathematics</option>
-                <option>Zoology</option>
-                <option>Botany</option>
-                <option>Computer Science</option>
-                <option>English</option>
-                <option>Education</option>
-                <option>Political Science</option>
+
+                <option value="">All Departments</option>
+
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Zoology">Zoology</option>
+                <option value="Botany">Botany</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="English">English</option>
+                <option value="Education">Education</option>
+                <option value="Political Science">Political Science</option>
+
             </select>
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Course / Programme</label>
 
             <select id="course">
-                <option value="">Select Course</option>
-                <option>B.Sc</option>
-                <option>B.A</option>
-                <option>B.Com</option>
-                <option>M.Sc</option>
-                <option>M.A</option>
-                <option>M.Com</option>
+
+                <option value="">All Courses</option>
+
+                <option value="B.Sc">B.Sc</option>
+                <option value="B.A">B.A</option>
+                <option value="B.Com">B.Com</option>
+                <option value="M.Sc">M.Sc</option>
+                <option value="M.A">M.A</option>
+                <option value="M.Com">M.Com</option>
+
             </select>
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Semester</label>
 
             <select id="semester">
-                <option value="">Select Semester</option>
-                <option>1st Semester</option>
-                <option>2nd Semester</option>
-                <option>3rd Semester</option>
-                <option>4th Semester</option>
-                <option>5th Semester</option>
-                <option>6th Semester</option>
+
+                <option value="">All Semesters</option>
+
+                <option value="1st Semester">1st Semester</option>
+                <option value="2nd Semester">2nd Semester</option>
+                <option value="3rd Semester">3rd Semester</option>
+                <option value="4th Semester">4th Semester</option>
+                <option value="5th Semester">5th Semester</option>
+                <option value="6th Semester">6th Semester</option>
+
             </select>
 
         </div>
 
-        <div class="results" id="universityResults"></div>
 
-    </div>
+        <div class="field">
 
-    <!-- BOARDS -->
+            <label>Year</label>
 
-    <div id="boardsPanel" class="panel hidden">
+            <select id="year">
 
-        <h2>🏫 Board Resources</h2>
+                <option value="">All Years</option>
 
-        <div class="select-grid">
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
 
-            <select>
-                <option>Select Board</option>
-                <option>Assam Board</option>
-                <option>CBSE</option>
-            </select>
-
-            <select>
-                <option>Select Class</option>
-                <option>Class 10</option>
-                <option>Class 12</option>
-            </select>
-
-            <select>
-                <option>Select Subject</option>
-                <option>English</option>
-                <option>Mathematics</option>
-                <option>Science</option>
-                <option>Physics</option>
-                <option>Chemistry</option>
-                <option>Biology</option>
-            </select>
-
-            <select>
-                <option>Select Year</option>
-                <option>2026</option>
-                <option>2025</option>
-                <option>2024</option>
-                <option>2023</option>
             </select>
 
         </div>
 
-        <div class="results"></div>
+    </div>
+
+
+    <div
+        class="results"
+        id="universityResults"
+    ></div>
+
+</div>
+
+
+<!-- BOARD PANEL -->
+
+<div id="boardsPanel" class="panel hidden">
+
+    <h2>🏫 Board Question Papers</h2>
+
+    <div class="select-grid">
+
+
+        <div class="field">
+
+            <label>Board</label>
+
+            <select id="board">
+
+                <option value="">All Boards</option>
+
+                <option value="Assam Board">
+                    Assam Board
+                </option>
+
+                <option value="CBSE">
+                    CBSE
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Class</label>
+
+            <select id="className">
+
+                <option value="">All Classes</option>
+
+                <option value="Class 10">
+                    Class 10
+                </option>
+
+                <option value="Class 12">
+                    Class 12
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Subject</label>
+
+            <select id="subject">
+
+                <option value="">All Subjects</option>
+
+                <option value="English">English</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Science">Science</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Year</label>
+
+            <select id="boardYear">
+
+                <option value="">All Years</option>
+
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+
+            </select>
+
+        </div>
 
     </div>
+
+
+    <div
+        class="results"
+        id="boardResults"
+    ></div>
+
+</div>
+
 
 </main>
 
+
 <footer>
+
     © 2026 Sariful Islam · NEP Study Hub
+
 </footer>
+
 
 <script>
 
+/* =========================================
+   SAMPLE QUESTION PAPER DATABASE
+========================================= */
+
+const papers = [
+
+    {
+        type: "university",
+        university: "Bodoland University",
+        department: "Physics",
+        course: "B.Sc",
+        semester: "5th Semester",
+        subject: "Quantum Mechanics",
+        code: "PHY-QM-501",
+        year: "2025",
+        pdf: "#"
+    },
+
+    {
+        type: "university",
+        university: "Bodoland University",
+        department: "Physics",
+        course: "B.Sc",
+        semester: "5th Semester",
+        subject: "Electromagnetic Theory",
+        code: "PHY-EMT-502",
+        year: "2025",
+        pdf: "#"
+    },
+
+    {
+        type: "university",
+        university: "Bodoland University",
+        department: "Mathematics",
+        course: "B.Sc",
+        semester: "3rd Semester",
+        subject: "Mathematics",
+        code: "MAT-301",
+        year: "2024",
+        pdf: "#"
+    }
+
+];
+
+
+/* =========================================
+   SHOW UNIVERSITY
+========================================= */
+
 function showUniversity() {
-    document.getElementById("universityPanel")
+
+    document
+        .getElementById("universityPanel")
         .classList.remove("hidden");
 
-    document.getElementById("boardsPanel")
+    document
+        .getElementById("boardsPanel")
         .classList.add("hidden");
+
+    document
+        .getElementById("universityCard")
+        .classList.add("active");
+
+    document
+        .getElementById("boardsCard")
+        .classList.remove("active");
+
+    renderUniversityPapers();
+
 }
+
+
+/* =========================================
+   SHOW BOARDS
+========================================= */
 
 function showBoards() {
-    document.getElementById("boardsPanel")
+
+    document
+        .getElementById("boardsPanel")
         .classList.remove("hidden");
 
-    document.getElementById("universityPanel")
+    document
+        .getElementById("universityPanel")
         .classList.add("hidden");
+
+    document
+        .getElementById("boardsCard")
+        .classList.add("active");
+
+    document
+        .getElementById("universityCard")
+        .classList.remove("active");
+
 }
+
+
+/* =========================================
+   UNIVERSITY FILTER
+========================================= */
+
+function renderUniversityPapers() {
+
+    const search =
+        document
+        .getElementById("paperSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const university =
+        document
+        .getElementById("university")
+        .value;
+
+    const department =
+        document
+        .getElementById("department")
+        .value;
+
+    const course =
+        document
+        .getElementById("course")
+        .value;
+
+    const semester =
+        document
+        .getElementById("semester")
+        .value;
+
+    const year =
+        document
+        .getElementById("year")
+        .value;
+
+
+    const filtered =
+        papers.filter(paper => {
+
+            if (paper.type !== "university")
+                return false;
+
+            if (
+                university &&
+                paper.university !== university
+            )
+                return false;
+
+            if (
+                department &&
+                paper.department !== department
+            )
+                return false;
+
+            if (
+                course &&
+                paper.course !== course
+            )
+                return false;
+
+            if (
+                semester &&
+                paper.semester !== semester
+            )
+                return false;
+
+            if (
+                year &&
+                paper.year !== year
+            )
+                return false;
+
+            if (search) {
+
+                const searchableText = (
+
+                    paper.subject +
+                    " " +
+                    paper.code +
+                    " " +
+                    paper.department +
+                    " " +
+                    paper.course +
+                    " " +
+                    paper.semester +
+                    " " +
+                    paper.year
+
+                ).toLowerCase();
+
+                if (
+                    !searchableText.includes(search)
+                )
+                    return false;
+
+            }
+
+            return true;
+
+        });
+
+
+    const results =
+        document.getElementById(
+            "universityResults"
+        );
+
+
+    if (filtered.length === 0) {
+
+        results.innerHTML = `
+            <div class="no-result">
+                No question paper found.
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    results.innerHTML = `
+
+        <div class="result-count">
+            ${filtered.length} question paper(s) found
+        </div>
+
+        ${filtered.map(paper => `
+
+            <article class="paper">
+
+                <h3>
+                    📄 ${paper.subject}
+                </h3>
+
+                <p class="paper-info">
+
+                    <strong>
+                        ${paper.university}
+                    </strong>
+                    <br>
+
+                    Department:
+                    ${paper.department}
+                    <br>
+
+                    Course:
+                    ${paper.course}
+                    <br>
+
+                    Semester:
+                    ${paper.semester}
+                    <br>
+
+                    Year:
+                    ${paper.year}
+                    <br>
+
+                    Paper Code:
+                    <span class="paper-code">
+                        ${paper.code}
+                    </span>
+
+                </p>
+
+                <div class="paper-buttons">
+
+                    <a
+                        href="${paper.pdf}"
+                        class="view"
+                        target="_blank"
+                    >
+                        View PDF
+                    </a>
+
+                    <a
+                        href="${paper.pdf}"
+                        class="download"
+                        download
+                    >
+                        Download
+                    </a>
+
+                </div>
+
+            </article>
+
+        `).join("")}
+
+    `;
+
+}
+
+
+/* =========================================
+   FILTER EVENTS
+========================================= */
+
+document
+    .getElementById("paperSearch")
+    .addEventListener(
+        "input",
+        renderUniversityPapers
+    );
+
+
+document
+    .getElementById("university")
+    .addEventListener(
+        "change",
+        renderUniversityPapers
+    );
+
+
+document
+    .getElementById("department")
+    .addEventListener(
+        "change",
+        renderUniversityPapers
+    );
+
+
+document
+    .getElementById("course")
+    .addEventListener(
+        "change",
+        renderUniversityPapers
+    );
+
+
+document
+    .getElementById("semester")
+    .addEventListener(
+        "change",
+        renderUniversityPapers
+    );
+
+
+document
+    .getElementById("year")
+    .addEventListener(
+        "change",
+        renderUniversityPapers
+    );
+
 
 </script>
 
 </body>
 </html>
+   
