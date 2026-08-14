@@ -2555,5 +2555,24 @@ const studyPapers = [
     department: "Commerce",
     course: "B.Com",
     semester: "1st
+    <script>
+function showUniversity() {
+    const panel = document.getElementById("universityPanel");
+
+    if (!panel) {
+        alert("University panel not found!");
+        return;
+    }
+
+    // University panel show karo
+    panel.classList.remove("hidden");
+
+    // University section tak automatically le jao
+    panel.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+</script>    
 </body>
 </html>
