@@ -16,57 +16,58 @@
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, sans-serif;
     background:#f5f7fb;
     color:#172033;
     line-height:1.6;
 }
 
+a{
+    text-decoration:none;
+}
+
 .navbar{
-    background:#ffffff;
+    background:#fff;
     padding:18px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
     position:sticky;
     top:0;
     z-index:100;
 }
 
 .logo{
-    text-decoration:none;
-    color:#172033;
     font-size:24px;
-    font-weight:800;
+    font-weight:700;
+    color:#172033;
 }
 
 .logo span{
     color:#2563eb;
 }
 
-.home-link{
-    text-decoration:none;
+.back{
     color:#2563eb;
     font-weight:600;
 }
 
 .hero{
     text-align:center;
-    padding:70px 20px 50px;
-    background:linear-gradient(135deg,#eef4ff,#ffffff);
+    padding:75px 20px 50px;
 }
 
 .label{
     color:#2563eb;
     font-size:13px;
-    font-weight:800;
+    font-weight:700;
     letter-spacing:2px;
     margin-bottom:12px;
 }
 
 .hero h1{
-    font-size:clamp(35px,7vw,62px);
+    font-size:clamp(36px,7vw,62px);
     line-height:1.1;
     margin-bottom:18px;
 }
@@ -83,16 +84,16 @@ body{
 }
 
 .hub{
-    max-width:1150px;
+    max-width:1100px;
     margin:auto;
-    padding:35px 20px 80px;
+    padding:0 20px 70px;
 }
 
 .search-box{
-    background:white;
+    background:#fff;
     padding:25px;
-    border-radius:18px;
-    box-shadow:0 5px 25px rgba(0,0,0,.08);
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.07);
     margin-bottom:25px;
 }
 
@@ -106,7 +107,7 @@ body{
     width:100%;
     padding:16px;
     border:1px solid #dbe1ea;
-    border-radius:10px;
+    border-radius:12px;
     font-size:16px;
     outline:none;
 }
@@ -122,46 +123,43 @@ body{
 }
 
 .option-card{
-    background:white;
+    background:#fff;
     padding:32px;
-    border-radius:18px;
+    border-radius:20px;
     text-align:center;
     cursor:pointer;
-    border:1px solid #e5e7eb;
+    border:2px solid transparent;
     transition:.2s;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
 .option-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transform:translateY(-4px);
 }
 
 .option-card.active{
-    border:2px solid #2563eb;
+    border-color:#2563eb;
 }
 
 .icon{
     font-size:40px;
-    margin-bottom:10px;
-}
-
-.option-card h2{
-    margin-bottom:8px;
+    margin-bottom:12px;
 }
 
 .option-card p{
     color:#64748b;
+    margin-top:8px;
 }
 
 .panel{
-    background:white;
+    background:#fff;
     margin-top:25px;
     padding:28px;
-    border-radius:18px;
-    box-shadow:0 5px 25px rgba(0,0,0,.08);
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.07);
 }
 
-.panel-title{
+.panel h2{
     margin-bottom:22px;
 }
 
@@ -173,8 +171,8 @@ body{
 
 .field label{
     display:block;
+    font-weight:600;
     font-size:14px;
-    font-weight:700;
     margin-bottom:7px;
 }
 
@@ -182,30 +180,94 @@ select{
     width:100%;
     padding:14px;
     border:1px solid #dbe1ea;
-    border-radius:9px;
-    background:white;
-    font-size:15px;
-}
-
-.paper-search{
-    margin-top:20px;
-}
-
-.paper-search input{
-    width:100%;
-    padding:14px;
-    border:1px solid #dbe1ea;
-    border-radius:9px;
-    font-size:15px;
-}
-
-.section-note{
-    margin-top:20px;
-    padding:15px;
-    background:#f1f5ff;
     border-radius:10px;
-    color:#475569;
+    background:#fff;
+    font-size:15px;
+}
+
+.action-row{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.btn{
+    border:none;
+    padding:12px 18px;
+    border-radius:9px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.clear-btn{
+    background:#eef2f7;
+    color:#172033;
+}
+
+.results{
+    margin-top:28px;
+}
+
+.result-count{
+    color:#64748b;
+    margin-bottom:15px;
+}
+
+.paper{
+    background:#fff;
+    border:1px solid #e2e8f0;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.paper h3{
+    margin-bottom:10px;
+}
+
+.paper-info{
+    color:#64748b;
     font-size:14px;
+    line-height:1.9;
+}
+
+.paper-code{
+    display:inline-block;
+    background:#eef4ff;
+    color:#2563eb;
+    padding:3px 8px;
+    border-radius:5px;
+    font-weight:700;
+}
+
+.paper-buttons{
+    margin-top:15px;
+}
+
+.paper-buttons a{
+    display:inline-block;
+    padding:10px 15px;
+    border-radius:8px;
+    margin-right:8px;
+    font-size:14px;
+}
+
+.view{
+    background:#2563eb;
+    color:#fff;
+}
+
+.download{
+    background:#e8eefc;
+    color:#2563eb;
+}
+
+.no-result{
+    text-align:center;
+    padding:35px;
+    color:#64748b;
+    border:1px dashed #cbd5e1;
+    border-radius:14px;
 }
 
 .hidden{
@@ -214,13 +276,12 @@ select{
 
 footer{
     text-align:center;
-    padding:30px;
+    padding:35px 20px;
     color:#64748b;
-    background:white;
-    border-top:1px solid #e5e7eb;
+    font-size:14px;
 }
 
-@media(max-width:700px){
+@media(max-width:650px){
 
     .options,
     .select-grid{
@@ -231,12 +292,16 @@ footer{
         padding:16px 20px;
     }
 
-    .home-link{
+    .back{
         font-size:14px;
     }
 
     .hero{
         padding-top:50px;
+    }
+
+    .panel{
+        padding:20px;
     }
 
 }
@@ -247,33 +312,22 @@ footer{
 
 <body>
 
-
-<!-- ================================
-     NAVBAR
-================================ -->
-
 <nav class="navbar">
 
     <a href="index.html" class="logo">
         Sariful<span>.</span>
     </a>
 
-    <a href="index.html" class="home-link">
+    <a href="index.html" class="back">
         ← Back to Website
     </a>
 
 </nav>
 
 
-<!-- ================================
-     HERO
-================================ -->
-
 <section class="hero">
 
-    <p class="label">
-        NEP STUDY HUB
-    </p>
+    <p class="label">NEP STUDY HUB</p>
 
     <h1>
         Your Academic
@@ -281,8 +335,8 @@ footer{
     </h1>
 
     <p>
-        Find previous-year question papers, academic resources
-        and study materials from universities and boards.
+        Find previous-year question papers, university resources
+        and board examination papers in one simple place.
     </p>
 
 </section>
@@ -291,28 +345,20 @@ footer{
 <main class="hub">
 
 
-<!-- ================================
-     GLOBAL SEARCH
-================================ -->
-
 <div class="search-box">
 
-    <label for="globalSearch">
-        🔍 Search Question Papers
+    <label for="paperSearch">
+        🔎 Search Question Papers
     </label>
 
     <input
         type="search"
-        id="globalSearch"
-        placeholder="Search by paper title, paper code or subject..."
+        id="paperSearch"
+        placeholder="Search by paper title, subject or paper code..."
     >
 
 </div>
 
-
-<!-- ================================
-     UNIVERSITY / BOARD
-================================ -->
 
 <div class="options">
 
@@ -324,11 +370,11 @@ footer{
 
         <div class="icon">🎓</div>
 
-        <h2>University</h2>
+        <h3>University</h3>
 
         <p>
-            University question papers from different
-            departments, courses and semesters.
+            University previous-year question papers
+            and semester-wise academic resources.
         </p>
 
     </div>
@@ -342,11 +388,11 @@ footer{
 
         <div class="icon">🏫</div>
 
-        <h2>Boards</h2>
+        <h3>Boards</h3>
 
         <p>
-            Class 10 and Class 12 question papers
-            from different boards.
+            Class 10 and Class 12 board examination
+            question papers and resources.
         </p>
 
     </div>
@@ -354,67 +400,27 @@ footer{
 </div>
 
 
-<!-- ==================================================
-     UNIVERSITY SECTION
-================================================== -->
-
-<section
+<div
     id="universityPanel"
     class="panel hidden"
 >
 
-    <h2 class="panel-title">
-        🎓 University Question Papers
-    </h2>
-
+    <h2>🎓 University Question Papers</h2>
 
     <div class="select-grid">
 
-
-        <!-- UNIVERSITY -->
-
         <div class="field">
 
-            <label>
-                University
-            </label>
+            <label>University</label>
 
             <select id="university">
 
                 <option value="">
-                    Select University
+                    All Universities
                 </option>
 
-                <option>
+                <option value="Bodoland University">
                     Bodoland University
-                </option>
-
-                <option>
-                    Gauhati University
-                </option>
-
-                <option>
-                    Dibrugarh University
-                </option>
-
-                <option>
-                    Assam University
-                </option>
-
-                <option>
-                    Tezpur University
-                </option>
-
-                <option>
-                    Cotton University
-                </option>
-
-                <option>
-                    Kumar Bhaskar Varma Sanskrit and Ancient Studies University
-                </option>
-
-                <option>
-                    Rabindranath Tagore University
                 </option>
 
             </select>
@@ -422,30 +428,26 @@ footer{
         </div>
 
 
-        <!-- STREAM -->
-
         <div class="field">
 
-            <label>
-                Stream
-            </label>
+            <label>Stream</label>
 
             <select id="stream">
 
                 <option value="">
-                    Select Stream
+                    All Streams
                 </option>
 
-                <option>
+                <option value="Science">
+                    Science
+                </option>
+
+                <option value="Arts">
                     Arts
                 </option>
 
-                <option>
+                <option value="Commerce">
                     Commerce
-                </option>
-
-                <option>
-                    Science
                 </option>
 
             </select>
@@ -453,144 +455,44 @@ footer{
         </div>
 
 
-        <!-- DEPARTMENT -->
-
         <div class="field">
 
-            <label>
-                Department
-            </label>
+            <label>Department</label>
 
             <select id="department">
 
                 <option value="">
-                    Select Department
+                    All Departments
                 </option>
-
-                <!-- ARTS -->
-
-                <optgroup label="Arts">
-
-                    <option>English</option>
-                    <option>Assamese</option>
-                    <option>Bengali</option>
-                    <option>Hindi</option>
-                    <option>History</option>
-                    <option>Political Science</option>
-                    <option>Education</option>
-                    <option>Economics</option>
-                    <option>Geography</option>
-                    <option>Sociology</option>
-                    <option>Philosophy</option>
-                    <option>Psychology</option>
-                    <option>Anthropology</option>
-                    <option>Journalism and Mass Communication</option>
-                    <option>Social Work</option>
-                    <option>Library and Information Science</option>
-                    <option>Home Science</option>
-                    <option>Archaeology</option>
-                    <option>Fine Arts</option>
-                    <option>Music</option>
-
-                </optgroup>
-
-
-                <!-- COMMERCE -->
-
-                <optgroup label="Commerce">
-
-                    <option>Commerce</option>
-                    <option>Accountancy</option>
-                    <option>Finance</option>
-                    <option>Management</option>
-                    <option>Marketing</option>
-                    <option>Business Administration</option>
-                    <option>Banking and Insurance</option>
-                    <option>Human Resource Management</option>
-                    <option>Business Economics</option>
-
-                </optgroup>
-
-
-                <!-- SCIENCE -->
-
-                <optgroup label="Science">
-
-                    <option>Physics</option>
-                    <option>Chemistry</option>
-                    <option>Mathematics</option>
-                    <option>Zoology</option>
-                    <option>Botany</option>
-                    <option>Computer Science</option>
-                    <option>Statistics</option>
-                    <option>Geology</option>
-                    <option>Environmental Science</option>
-                    <option>Biotechnology</option>
-                    <option>Microbiology</option>
-                    <option>Electronics</option>
-                    <option>Information Technology</option>
-
-                </optgroup>
 
             </select>
 
         </div>
 
 
-        <!-- COURSE -->
-
         <div class="field">
 
-            <label>
-                Course / Programme
-            </label>
+            <label>Course / Programme</label>
 
             <select id="course">
 
                 <option value="">
-                    Select Course
+                    All Courses
                 </option>
-
-                <optgroup label="Undergraduate">
-
-                    <option>B.A.</option>
-                    <option>B.Sc.</option>
-                    <option>B.Com.</option>
-                    <option>BBA</option>
-                    <option>BCA</option>
-                    <option>BSW</option>
-                    <option>B.Sc. Computer Science</option>
-
-                </optgroup>
-
-                <optgroup label="Postgraduate">
-
-                    <option>M.A.</option>
-                    <option>M.Sc.</option>
-                    <option>M.Com.</option>
-                    <option>MBA</option>
-                    <option>MCA</option>
-                    <option>MSW</option>
-
-                </optgroup>
 
             </select>
 
         </div>
 
 
-        <!-- SEMESTER -->
-
         <div class="field">
 
-            <label>
-                Semester
-            </label>
+            <label>Semester</label>
 
             <select id="semester">
 
                 <option value="">
-                    Select Semester
+                    All Semesters
                 </option>
 
                 <option>1st Semester</option>
@@ -607,18 +509,14 @@ footer{
         </div>
 
 
-        <!-- YEAR -->
-
         <div class="field">
 
-            <label>
-                Examination Year
-            </label>
+            <label>Year</label>
 
             <select id="year">
 
                 <option value="">
-                    Select Year
+                    All Years
                 </option>
 
                 <option>2026</option>
@@ -628,11 +526,6 @@ footer{
                 <option>2022</option>
                 <option>2021</option>
                 <option>2020</option>
-                <option>2019</option>
-                <option>2018</option>
-                <option>2017</option>
-                <option>2016</option>
-                <option>2015</option>
 
             </select>
 
@@ -641,222 +534,113 @@ footer{
     </div>
 
 
-    <!-- PAPER SEARCH -->
+    <div class="action-row">
 
-    <div class="paper-search">
-
-        <label>
-            📄 Paper Title / Paper Code
-        </label>
-
-        <input
-            type="search"
-            id="paperSearch"
-            placeholder="Example: Quantum Mechanics / PHY-QM-501"
+        <button
+            class="btn clear-btn"
+            onclick="clearUniversityFilters()"
         >
+            Clear Filters
+        </button>
 
     </div>
 
 
-    <div class="section-note">
+    <div
+        class="results"
+        id="universityResults"
+    ></div>
 
-        📚 <strong>How it will work:</strong>
-
-        Select University → Stream → Department →
-        Course → Semester → Year → Search Paper Title
-        or Paper Code → Get PDF.
-
-    </div>
+</div>
 
 
-    <!-- RESULTS WILL COME HERE IN PART 2 -->
-
-    <div id="universityResults"></div>
-
-</section>
-
-
-<!-- ==================================================
-     BOARD SECTION
-================================================== -->
-
-<section
+<div
     id="boardsPanel"
     class="panel hidden"
 >
 
-    <h2 class="panel-title">
-        🏫 Board Question Papers
-    </h2>
-
+    <h2>🏫 Board Question Papers</h2>
 
     <div class="select-grid">
 
-
-        <!-- BOARD -->
-
         <div class="field">
 
-            <label>
-                Board
-            </label>
+            <label>Board</label>
 
             <select id="board">
 
                 <option value="">
-                    Select Board
+                    All Boards
                 </option>
 
-                <option>
-                    Assam State School Education Board
-                </option>
-
-                <option>
-                    CBSE
-                </option>
-
-                <option>
-                    CISCE
-                </option>
+                <option>Assam Board</option>
+                <option>CBSE</option>
 
             </select>
 
         </div>
 
 
-        <!-- CLASS -->
-
         <div class="field">
 
-            <label>
-                Class
-            </label>
+            <label>Class</label>
 
             <select id="className">
 
                 <option value="">
-                    Select Class
+                    All Classes
                 </option>
 
-                <option>
-                    Class 10
-                </option>
-
-                <option>
-                    Class 12
-                </option>
+                <option>Class 10</option>
+                <option>Class 12</option>
 
             </select>
 
         </div>
 
 
-        <!-- STREAM -->
-
         <div class="field">
 
-            <label>
-                Stream
-            </label>
+            <label>Stream</label>
 
             <select id="boardStream">
 
                 <option value="">
-                    Select Stream
+                    All Streams
                 </option>
 
-                <option>
-                    Arts
-                </option>
-
-                <option>
-                    Commerce
-                </option>
-
-                <option>
-                    Science
-                </option>
+                <option>Science</option>
+                <option>Arts</option>
+                <option>Commerce</option>
 
             </select>
 
         </div>
 
 
-        <!-- SUBJECT -->
-
         <div class="field">
 
-            <label>
-                Subject
-            </label>
+            <label>Subject</label>
 
             <select id="subject">
 
                 <option value="">
-                    Select Subject
+                    All Subjects
                 </option>
-
-                <optgroup label="Languages">
-
-                    <option>English</option>
-                    <option>Assamese</option>
-                    <option>Hindi</option>
-                    <option>Bengali</option>
-
-                </optgroup>
-
-
-                <optgroup label="Arts">
-
-                    <option>History</option>
-                    <option>Political Science</option>
-                    <option>Geography</option>
-                    <option>Economics</option>
-                    <option>Education</option>
-                    <option>Sociology</option>
-                    <option>Philosophy</option>
-
-                </optgroup>
-
-
-                <optgroup label="Commerce">
-
-                    <option>Accountancy</option>
-                    <option>Business Studies</option>
-                    <option>Economics</option>
-                    <option>Entrepreneurship</option>
-
-                </optgroup>
-
-
-                <optgroup label="Science">
-
-                    <option>Mathematics</option>
-                    <option>Physics</option>
-                    <option>Chemistry</option>
-                    <option>Biology</option>
-                    <option>Computer Science</option>
-                    <option>Environmental Science</option>
-
-                </optgroup>
 
             </select>
 
         </div>
 
 
-        <!-- BOARD YEAR -->
-
         <div class="field">
 
-            <label>
-                Examination Year
-            </label>
+            <label>Year</label>
 
             <select id="boardYear">
 
                 <option value="">
-                    Select Year
+                    All Years
                 </option>
 
                 <option>2026</option>
@@ -864,11 +648,6 @@ footer{
                 <option>2024</option>
                 <option>2023</option>
                 <option>2022</option>
-                <option>2021</option>
-                <option>2020</option>
-                <option>2019</option>
-                <option>2018</option>
-                <option>2017</option>
 
             </select>
 
@@ -877,1588 +656,1904 @@ footer{
     </div>
 
 
-    <!-- BOARD PAPER SEARCH -->
+    <div class="action-row">
 
-    <div class="paper-search">
-
-        <label>
-            📄 Paper Title / Subject
-        </label>
-
-        <input
-            type="search"
-            id="boardPaperSearch"
-            placeholder="Example: Physics / Mathematics / English"
+        <button
+            class="btn clear-btn"
+            onclick="clearBoardFilters()"
         >
+            Clear Filters
+        </button>
 
     </div>
 
 
-    <div class="section-note">
+    <div
+        class="results"
+        id="boardResults"
+    ></div>
 
-        📚 <strong>Board search:</strong>
-
-        Select Board → Class → Stream → Subject →
-        Year → Search → Get Question Paper PDF.
-
-    </div>
-
-
-    <!-- RESULTS WILL COME HERE IN PART 2 -->
-
-    <div id="boardResults"></div>
-
-</section>
+</div>
 
 
 </main>
 
-
-<!-- ================================
-     FOOTER
-================================ -->
 
 <footer>
 
     © 2026 Sariful Islam · NEP Study Hub
 
 </footer>
+<script>
 
-/* =========================================
+/* =========================================================
    PART 2 — NEP STUDY HUB
    COMPLETE PAPER DATABASE
-   ARTS + COMMERCE + SCIENCE
-========================================= */
-
-const papers = [
-
-    /* =====================================
-       SCIENCE — PHYSICS
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Physics",
-        course: "B.Sc",
-        semester: "1st Semester",
-        subject: "Physics",
-        code: "PHY-101",
-        year: "2025",
-        title: "Physics-I",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Physics",
-        course: "B.Sc",
-        semester: "2nd Semester",
-        subject: "Physics",
-        code: "PHY-201",
-        year: "2025",
-        title: "Physics-II",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Physics",
-        course: "B.Sc",
-        semester: "3rd Semester",
-        subject: "Electromagnetic Theory",
-        code: "PHY-301",
-        year: "2024",
-        title: "Electromagnetic Theory",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Physics",
-        course: "B.Sc",
-        semester: "4th Semester",
-        subject: "Wave and Optics",
-        code: "PHY-401",
-        year: "2024",
-        title: "Wave and Optics",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Physics",
-        course: "B.Sc",
-        semester: "5th Semester",
-        subject: "Quantum Mechanics",
-        code: "PHY-QM-501",
-        year: "2025",
-        title: "Quantum Mechanics",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Physics",
-        course: "B.Sc",
-        semester: "5th Semester",
-        subject: "Electromagnetic Theory",
-        code: "PHY-EMT-502",
-        year: "2025",
-        title: "Electromagnetic Theory",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Physics",
-        course: "B.Sc",
-        semester: "6th Semester",
-        subject: "Nuclear and Particle Physics",
-        code: "PHY-NP-601",
-        year: "2026",
-        title: "Nuclear and Particle Physics",
-        pdf: "#"
-    },
-
-
-    /* =====================================
-       SCIENCE — CHEMISTRY
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Chemistry",
-        course: "B.Sc",
-        semester: "1st Semester",
-        subject: "Chemistry",
-        code: "CHE-101",
-        year: "2025",
-        title: "Chemistry-I",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Chemistry",
-        course: "B.Sc",
-        semester: "2nd Semester",
-        subject: "Chemistry",
-        code: "CHE-201",
-        year: "2025",
-        title: "Chemistry-II",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Chemistry",
-        course: "B.Sc",
-        semester: "3rd Semester",
-        subject: "Organic Chemistry",
-        code: "CHE-301",
-        year: "2024",
-        title: "Organic Chemistry",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Chemistry",
-        course: "B.Sc",
-        semester: "4th Semester",
-        subject: "Physical Chemistry",
-        code: "CHE-401",
-        year: "2024",
-        title: "Physical Chemistry",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Chemistry",
-        course: "B.Sc",
-        semester: "5th Semester",
-        subject: "Inorganic Chemistry",
-        code: "CHE-501",
-        year: "2025",
-        title: "Inorganic Chemistry",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Chemistry",
-        course: "B.Sc",
-        semester: "6th Semester",
-        subject: "Advanced Chemistry",
-        code: "CHE-601",
-        year: "2026",
-        title: "Advanced Chemistry",
-        pdf: "#"
-    },
-
-
-    /* =====================================
-       SCIENCE — MATHEMATICS
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Mathematics",
-        course: "B.Sc",
-        semester: "1st Semester",
-        subject: "Mathematics",
-        code: "MAT-101",
-        year: "2025",
-        title: "Mathematics-I",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Mathematics",
-        course: "B.Sc",
-        semester: "2nd Semester",
-        subject: "Mathematics",
-        code: "MAT-201",
-        year: "2025",
-        title: "Mathematics-II",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Mathematics",
-        course: "B.Sc",
-        semester: "3rd Semester",
-        subject: "Mathematics",
-        code: "MAT-301",
-        year: "2024",
-        title: "Mathematics-III",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Mathematics",
-        course: "B.Sc",
-        semester: "4th Semester",
-        subject: "Differential Equations",
-        code: "MAT-401",
-        year: "2024",
-        title: "Differential Equations",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Mathematics",
-        course: "B.Sc",
-        semester: "5th Semester",
-        subject: "Abstract Algebra",
-        code: "MAT-501",
-        year: "2025",
-        title: "Abstract Algebra",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Mathematics",
-        course: "B.Sc",
-        semester: "6th Semester",
-        subject: "Advanced Mathematics",
-        code: "MAT-601",
-        year: "2026",
-        title: "Advanced Mathematics",
-        pdf: "#"
-    },
-
-
-    /* =====================================
-       SCIENCE — ZOOLOGY
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Zoology",
-        course: "B.Sc",
-        semester: "1st Semester",
-        subject: "Zoology",
-        code: "ZOO-101",
-        year: "2025",
-        title: "Animal Diversity",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Zoology",
-        course: "B.Sc",
-        semester: "2nd Semester",
-        subject: "Zoology",
-        code: "ZOO-201",
-        year: "2025",
-        title: "Animal Biology",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Zoology",
-        course: "B.Sc",
-        semester: "3rd Semester",
-        subject: "Cell Biology",
-        code: "ZOO-301",
-        year: "2024",
-        title: "Cell Biology",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Zoology",
-        course: "B.Sc",
-        semester: "4th Semester",
-        subject: "Genetics",
-        code: "ZOO-401",
-        year: "2024",
-        title: "Genetics",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Zoology",
-        course: "B.Sc",
-        semester: "5th Semester",
-        subject: "Evolution",
-        code: "ZOO-501",
-        year: "2025",
-        title: "Evolution and Biology",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Zoology",
-        course: "B.Sc",
-        semester: "6th Semester",
-        subject: "Animal Physiology",
-        code: "ZOO-601",
-        year: "2026",
-        title: "Animal Physiology",
-        pdf: "#"
-    },
-
-
-    /* =====================================
-       SCIENCE — BOTANY
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Botany",
-        course: "B.Sc",
-        semester: "1st Semester",
-        subject: "Botany",
-        code: "BOT-101",
-        year: "2025",
-        title: "Plant Diversity",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Botany",
-        course: "B.Sc",
-        semester: "2nd Semester",
-        subject: "Plant Biology",
-        code: "BOT-201",
-        year: "2025",
-        title: "Plant Biology",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Botany",
-        course: "B.Sc",
-        semester: "3rd Semester",
-        subject: "Plant Anatomy",
-        code: "BOT-301",
-        year: "2024",
-        title: "Plant Anatomy",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Botany",
-        course: "B.Sc",
-        semester: "4th Semester",
-        subject: "Plant Physiology",
-        code: "BOT-401",
-        year: "2024",
-        title: "Plant Physiology",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Botany",
-        course: "B.Sc",
-        semester: "5th Semester",
-        subject: "Genetics",
-        code: "BOT-501",
-        year: "2025",
-        title: "Plant Genetics",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Botany",
-        course: "B.Sc",
-        semester: "6th Semester",
-        subject: "Ecology",
-        code: "BOT-601",
-        year: "2026",
-        title: "Plant Ecology",
-        pdf: "#"
-    },
-
-
-    /* =====================================
-       ARTS — ENGLISH
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "English",
-        course: "B.A",
-        semester: "1st Semester",
-        subject: "English",
-        code: "ENG-101",
-        year: "2025",
-        title: "English Literature-I",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "English",
-        course: "B.A",
-        semester: "2nd Semester",
-        subject: "English",
-        code: "ENG-201",
-        year: "2025",
-        title: "English Literature-II",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "English",
-        course: "B.A",
-        semester: "3rd Semester",
-        subject: "English Literature",
-        code: "ENG-301",
-        year: "2024",
-        title: "English Literature-III",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "English",
-        course: "B.A",
-        semester: "4th Semester",
-        subject: "English Literature",
-        code: "ENG-401",
-        year: "2024",
-        title: "English Literature-IV",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "English",
-        course: "B.A",
-        semester: "5th Semester",
-        subject: "English Literature",
-        code: "ENG-501",
-        year: "2025",
-        title: "Advanced English Literature",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "English",
-        course: "B.A",
-        semester: "6th Semester",
-        subject: "English Literature",
-        code: "ENG-601",
-        year: "2026",
-        title: "Modern English Literature",
-        pdf: "#"
-    },
-
-
-    /* =====================================
-       ARTS — POLITICAL SCIENCE
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Political Science",
-        course: "B.A",
-        semester: "1st Semester",
-        subject: "Political Science",
-        code: "POL-101",
-        year: "2025",
-        title: "Political Theory",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Political Science",
-        course: "B.A",
-        semester: "2nd Semester",
-        subject: "Political Science",
-        code: "POL-201",
-        year: "2025",
-        title: "Indian Government and Politics",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Political Science",
-        course: "B.A",
-        semester: "3rd Semester",
-        subject: "Political Science",
-        code: "POL-301",
-        year: "2024",
-        title: "Comparative Politics",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Political Science",
-        course: "B.A",
-        semester: "4th Semester",
-        subject: "Political Science",
-        code: "POL-401",
-        year: "2024",
-        title: "International Relations",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Political Science",
-        course: "B.A",
-        semester: "5th Semester",
-        subject: "Political Science",
-        code: "POL-501",
-        year: "2025",
-        title: "Public Administration",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Political Science",
-        course: "B.A",
-        semester: "6th Semester",
-        subject: "Political Science",
-        code: "POL-601",
-        year: "2026",
-        title: "Indian Political Thought",
-        pdf: "#"
-    },
-
-
-    /* =====================================
-       ARTS — EDUCATION
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Education",
-        course: "B.A",
-        semester: "1st Semester",
-        subject: "Education",
-        code: "EDU-101",
-        year: "2025",
-        title: "Introduction to Education",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Education",
-        course: "B.A",
-        semester: "2nd Semester",
-        subject: "Education",
-        code: "EDU-201",
-        year: "2025",
-        title: "Educational Psychology",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Education",
-        course: "B.A",
-        semester: "3rd Semester",
-        subject: "Education",
-        code: "EDU-301",
-        year: "2024",
-        title: "Educational Sociology",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Education",
-        course: "B.A",
-        semester: "4th Semester",
-        subject: "Education",
-        code: "EDU-401",
-        year: "2024",
-        title: "Curriculum Studies",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Education",
-        course: "B.A",
-        semester: "5th Semester",
-        subject: "Education",
-        code: "EDU-501",
-        year: "2025",
-        title: "Educational Measurement",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Education",
-        course: "B.A",
-        semester: "6th Semester",
-        subject: "Education",
-        code: "EDU-601",
-        year: "2026",
-        title: "Contemporary Education",
-        pdf: "#"
-    },
-
-
-    /* =====================================
-       ARTS — HISTORY
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "History",
-        course: "B.A",
-        semester: "1st Semester",
-        subject: "History",
-        code: "HIS-101",
-        year: "2025",
-        title: "Ancient Indian History",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "History",
-        course: "B.A",
-        semester: "2nd Semester",
-        subject: "History",
-        code: "HIS-201",
-        year: "2025",
-        title: "Medieval Indian History",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "History",
-        course: "B.A",
-        semester: "3rd Semester",
-        subject: "History",
-        code: "HIS-301",
-        year: "2024",
-        title: "Modern Indian History",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "History",
-        course: "B.A",
-        semester: "4th Semester",
-        subject: "History",
-        code: "HIS-401",
-        year: "2024",
-        title: "World History",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "History",
-        course: "B.A",
-        semester: "5th Semester",
-        subject: "History",
-        code: "HIS-501",
-        year: "2025",
-        title: "Indian National Movement",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "History",
-        course: "B.A",
-        semester: "6th Semester",
-        subject: "History",
-        code: "HIS-601",
-        year: "2026",
-        title: "Contemporary India",
-        pdf: "#"
-    },
-
-
-    /* =====================================
-       COMMERCE — ACCOUNTANCY
-    ===================================== */
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Commerce",
-        course: "B.Com",
-        semester: "1st Semester",
-        subject: "Financial Accounting",
-        code: "COM-101",
-        year: "2025",
-        title: "Financial Accounting-I",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Commerce",
-        course: "B.Com",
-        semester: "2nd Semester",
-        subject: "Business Organisation",
-        code: "COM-201",
-        year: "2025",
-        title: "Business Organisation",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Commerce",
-        course: "B.Com",
-        semester: "3rd Semester",
-        subject: "Corporate Accounting",
-        code: "COM-301",
-        year: "2024",
-        title: "Corporate Accounting",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Commerce",
-        course: "B.Com",
-        semester: "4th Semester",
-        subject: "Business Law",
-        code: "COM-401",
-        year: "2024",
-        title: "Business Law",
-        pdf: "#"
-    },
-
-    {
-        type: "university",
-        university: "Bodoland University",
-        department: "Commerce",
-        course: "B.Com",
-        semester: "5th Semester",
-        subject: "Cost Accounting",
-        code: "COM-501",
-        year: "2025",
-        title:title: "Cost Accounting",
-pdf: "#"
-}
-];
-    <script>
-
-/* =========================================
-   PART 3 — SEARCH & FILTER SYSTEM
-========================================= */
-
-const globalSearch = document.getElementById("globalSearch");
-const paperSearch = document.getElementById("paperSearch");
-const boardPaperSearch = document.getElementById("boardPaperSearch");
-
-const university = document.getElementById("university");
-const stream = document.getElementById("stream");
-const department = document.getElementById("department");
-const course = document.getElementById("course");
-const semester = document.getElementById("semester");
-const year = document.getElementById("year");
-
-const board = document.getElementById("board");
-const className = document.getElementById("className");
-const boardStream = document.getElementById("boardStream");
-const subject = document.getElementById("subject");
-const boardYear = document.getElementById("boardYear");
-
-const universityResults =
-    document.getElementById("universityResults");
-
-const boardResults =
-    document.getElementById("boardResults");
-
-
-/* =========================================
-   SHOW UNIVERSITY
-========================================= */
-
-function showUniversity(){
-
-    document
-        .getElementById("universityPanel")
-        .classList.remove("hidden");
-
-    document
-        .getElementById("boardsPanel")
-        .classList.add("hidden");
-
-    document
-        .getElementById("universityCard")
-        .classList.add("active");
-
-    document
-        .getElementById("boardsCard")
-        .classList.remove("active");
-
-    renderUniversityPapers();
-}
-
-
-/* =========================================
-   SHOW BOARDS
-========================================= */
-
-function showBoards(){
-
-    document
-        .getElementById("boardsPanel")
-        .classList.remove("hidden");
-
-    document
-        .getElementById("universityPanel")
-        .classList.add("hidden");
-
-    document
-        .getElementById("boardsCard")
-        .classList.add("active");
-
-    document
-        .getElementById("universityCard")
-        .classList.remove("active");
-
-    renderBoardPapers();
-}
-
-
-/* =========================================
-   UNIVERSITY SEARCH
-========================================= */
-
-function renderUniversityPapers(){
-
-    if(!universityResults) return;
-
-    const searchText = (
-
-        (globalSearch?.value || "") +
-        " " +
-        (paperSearch?.value || "")
-
-    ).toLowerCase().trim();
-
-
-    const filtered = papers.filter(paper => {
-
-        if(paper.type !== "university")
-            return false;
-
-
-        if(
-            university.value &&
-            paper.university !== university.value
-        )
-            return false;
-
-
-        if(
-            stream.value &&
-            !getStream(paper.department)
-                .toLowerCase()
-                .includes(stream.value.toLowerCase())
-        )
-            return false;
-
-
-        if(
-            department.value &&
-            paper.department !== department.value
-        )
-            return false;
-
-
-        if(
-            course.value &&
-            paper.course.replace(".", "") !==
-            course.value.replace(".", "")
-        )
-            return false;
-
-
-        if(
-            semester.value &&
-            paper.semester !== semester.value
-        )
-            return false;
-
-
-        if(
-            year.value &&
-            paper.year !== year.value
-        )
-            return false;
-
-
-        if(searchText){
-
-            const searchable = (
-
-                (paper.title || "") +
-                " " +
-                (paper.subject || "") +
-                " " +
-                (paper.code || "") +
-                " " +
-                (paper.department || "") +
-                " " +
-                (paper.course || "") +
-                " " +
-                (paper.semester || "") +
-                " " +
-                (paper.year || "") +
-                " " +
-                (paper.university || "")
-
-            ).toLowerCase();
-
-
-            if(!searchable.includes(searchText))
-                return false;
-        }
-
-
-        return true;
-
-    });
-
-
-    displayUniversityResults(filtered);
-}
-
-
-/* =========================================
-   STREAM DETECTION
-========================================= */
-
-function getStream(dept){
-
-    const arts = [
-        "English",
-        "Assamese",
-        "Bengali",
-        "Hindi",
-        "History",
-        "Political Science",
-        "Education",
-        "Economics",
-        "Geography",
-        "Sociology",
-        "Philosophy",
-        "Psychology",
-        "Anthropology",
-        "Journalism and Mass Communication",
-        "Social Work",
-        "Library and Information Science",
-        "Home Science",
-        "Archaeology",
-        "Fine Arts",
-        "Music"
-    ];
-
-
-    const commerce = [
-        "Commerce",
-        "Accountancy",
-        "Finance",
-        "Management",
-        "Marketing",
-        "Business Administration",
-        "Banking and Insurance",
-        "Human Resource Management",
-        "Business Economics"
-    ];
-
-
-    if(arts.includes(dept))
-        return "Arts";
-
-
-    if(commerce.includes(dept))
-        return "Commerce";
-
-
-    return "Science";
-}
-
-
-/* =========================================
-   DISPLAY UNIVERSITY RESULTS
-========================================= */
-
-function displayUniversityResults(results){
-
-    if(results.length === 0){
-
-        universityResults.innerHTML = `
-            <div class="section-note">
-                ❌ No question paper found.
-                Try changing your filters or search term.
-            </div>
-        `;
-
-        return;
-    }
-
-
-    universityResults.innerHTML = `
-
-        <div class="section-note">
-
-            📚 <strong>
-                ${results.length}
-                question paper(s) found
-            </strong>
-
-        </div>
-
-        ${results.map(paper => `
-
-            <article
-                class="paper"
-                style="
-                    margin-top:15px;
-                    padding:20px;
-                    border:1px solid #e2e8f0;
-                    border-radius:14px;
-                "
-            >
-
-                <h3>
-                    📄 ${paper.title}
-                </h3>
-
-                <p
-                    style="
-                        color:#64748b;
-                        margin:10px 0;
-                    "
-                >
-
-                    <strong>
-                        ${paper.university}
-                    </strong>
-
-                    <br>
-
-                    Stream:
-                    ${getStream(paper.department)}
-
-                    <br>
-
-                    Department:
-                    ${paper.department}
-
-                    <br>
-
-                    Course:
-                    ${paper.course}
-
-                    <br>
-
-                    Semester:
-                    ${paper.semester}
-
-                    <br>
-
-                    Subject:
-                    ${paper.subject}
-
-                    <br>
-
-                    Paper Code:
-                    <strong>
-                        ${paper.code}
-                    </strong>
-
-                    <br>
-
-                    Year:
-                    ${paper.year}
-
-                </p>
-
-
-                <div>
-
-                    <a
-                        href="${paper.pdf}"
-                        target="_blank"
-                        style="
-                            display:inline-block;
-                            background:#2563eb;
-                            color:white;
-                            padding:10px 16px;
-                            border-radius:8px;
-                            text-decoration:none;
-                            margin-right:8px;
-                        "
-                    >
-                        📄 View PDF
-                    </a>
-
-
-                    <a
-                        href="${paper.pdf}"
-                        download
-                        style="
-                            display:inline-block;
-                            background:#e8eefc;
-                            color:#2563eb;
-                            padding:10px 16px;
-                            border-radius:8px;
-                            text-decoration:none;
-                        "
-                    >
-                        ⬇ Download
-                    </a>
-
-                </div>
-
-            </article>
-
-        `).join("")}
-
-    `;
-}
-
-
-/* =========================================
-   BOARD SEARCH
-========================================= */
-
-function renderBoardPapers(){
-
-    if(!boardResults) return;
-
-
-    const searchText = (
-
-        (globalSearch?.value || "") +
-        " " +
-        (boardPaperSearch?.value || "")
-
-    ).toLowerCase().trim();
-
-
-    const filtered = papers.filter(paper => {
-
-        if(paper.type !== "board")
-            return false;
-
-
-        if(
-            board.value &&
-            paper.board !== board.value
-        )
-            return false;
-
-
-        if(
-            className.value &&
-            paper.className !== className.value
-        )
-            return false;
-
-
-        if(
-            boardStream.value &&
-            !getBoardStream(paper.subject)
-                .toLowerCase()
-                .includes(
-                    boardStream.value.toLowerCase()
-                )
-        )
-            return false;
-
-
-        if(
-            subject.value &&
-            paper.subject !== subject.value
-        )
-            return false;
-
-
-        if(
-            boardYear.value &&
-            paper.year !== boardYear.value
-        )
-            return false;
-
-
-        if(searchText){
-
-            const searchable = (
-
-                (paper.title || "") +
-                " " +
-                (paper.subject || "") +
-                " " +
-                (paper.code || "") +
-                " " +
-                (paper.year || "") +
-                " " +
-                (paper.board || "") +
-                " " +
-                (paper.className || "")
-
-            ).toLowerCase();
-
-
-            if(!searchable.includes(searchText))
-                return false;
-        }
-
-
-        return true;
-
-    });
-
-
-    displayBoardResults(filtered);
-}
-
-
-/* =========================================
-   BOARD STREAM
-========================================= */
-
-function getBoardStream(subjectName){
-
-    const science = [
-        "Mathematics",
-        "Physics",
-        "Chemistry",
-        "Biology",
-        "Computer Science",
-        "Environmental Science"
-    ];
-
-
-    const commerce = [
-        "Accountancy",
-        "Business Studies",
-        "Economics",
-        "Entrepreneurship"
-    ];
-
-
-    const arts = [
-        "History",
-        "Political Science",
-        "Geography",
-        "Economics",
-        "Education",
-        "Sociology",
-        "Philosophy"
-    ];
-
-
-    if(science.includes(subjectName))
-        return "Science";
-
-
-    if(commerce.includes(subjectName))
-        return "Commerce";
-
-
-    if(arts.includes(subjectName))
-        return "Arts";
-
-
-    return "";
-}
-
-
-/* =========================================
-   DISPLAY BOARD RESULTS
-========================================= */
-
-function displayBoardResults(results){
-
-    if(results.length === 0){
-
-        boardResults.innerHTML = `
-            <div class="section-note">
-                ❌ No question paper found.
-                Try changing your filters or search term.
-            </div>
-        `;
-
-        return;
-    }
-
-
-    boardResults.innerHTML = `
-
-        <div class="section-note">
-
-            📚 <strong>
-                ${results.length}
-                board paper(s) found
-            </strong>
-
-        </div>
-
-
-        ${results.map(paper => `
-
-            <article
-                class="paper"
-                style="
-                    margin-top:15px;
-                    padding:20px;
-                    border:1px solid #e2e8f0;
-                    border-radius:14px;
-                "
-            >
-
-                <h3>
-                    📄 ${paper.title}
-                </h3>
-
-                <p
-                    style="
-                        color:#64748b;
-                        margin:10px 0;
-                    "
-                >
-
-                    <strong>
-                        ${paper.board}
-                    </strong>
-
-                    <br>
-
-                    Class:
-                    ${paper.className}
-
-                    <br>
-
-                    Subject:
-                    ${paper.subject}
-
-                    <br>
-
-                    Paper Code:
-                    <strong>
-                        ${paper.code}
-                    </strong>
-
-                    <br>
-
-                    Year:
-                    ${paper.year}
-
-                </p>
-
-
-                <a
-                    href="${paper.pdf}"
-                    target="_blank"
-                    style="
-                        display:inline-block;
-                        background:#2563eb;
-                        color:white;
-                        padding:10px 16px;
-                        border-radius:8px;
-                        text-decoration:none;
-                    "
-                >
-                    📄 View PDF
-                </a>
-
-            </article>
-
-        `).join("")}
-
-    `;
-}
-
-
-/* =========================================
-   ALL FILTER EVENTS
-========================================= */
-
-[
-    globalSearch,
-    paperSearch,
-    university,
-    stream,
-    department,
-    course,
-    semester,
-    year
-].forEach(element => {
-
-    if(!element) return;
-
-    element.addEventListener(
-        "input",
-        renderUniversityPapers
-    );
-
-    element.addEventListener(
-        "change",
-        renderUniversityPapers
-    );
-
-});
-
-
-[
-    boardPaperSearch,
-    board,
-    className,
-    boardStream,
-    subject,
-    boardYear
-].forEach(element => {
-
-    if(!element) return;
-
-    element.addEventListener(
-        "input",
-        renderBoardPapers
-    );
-
-    element.addEventListener(
-        "change",
-        renderBoardPapers
-    );
-
-});
-
-
-/* =========================================
-   INITIAL STATE
-========================================= */
-
-console.log(
-    "NEP Study Hub Search System Loaded"
-);
-
-</script>
+   SCIENCE + ARTS + COMMERCE
+   ========================================================= */
+
+const studyPapers = [
+
+/* =========================================================
+   SCIENCE — PHYSICS
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Physics",
+    code: "PHY-101",
+    year: "2025",
+    title: "Physics-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Physics",
+    code: "PHY-201",
+    year: "2025",
+    title: "Physics-II",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Electromagnetic Theory",
+    code: "PHY-301",
+    year: "2024",
+    title: "Electromagnetic Theory",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Wave and Optics",
+    code: "PHY-401",
+    year: "2024",
+    title: "Wave and Optics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Quantum Mechanics",
+    code: "PHY-QM-501",
+    year: "2025",
+    title: "Quantum Mechanics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Electromagnetic Theory",
+    code: "PHY-EMT-502",
+    year: "2025",
+    title: "Electromagnetic Theory",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Nuclear and Particle Physics",
+    code: "PHY-NP-601",
+    year: "2026",
+    title: "Nuclear and Particle Physics",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — CHEMISTRY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Chemistry",
+    code: "CHE-101",
+    year: "2025",
+    title: "Chemistry-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Chemistry",
+    code: "CHE-201",
+    year: "2025",
+    title: "Chemistry-II",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Organic Chemistry",
+    code: "CHE-301",
+    year: "2024",
+    title: "Organic Chemistry",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Physical Chemistry",
+    code: "CHE-401",
+    year: "2024",
+    title: "Physical Chemistry",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Inorganic Chemistry",
+    code: "CHE-501",
+    year: "2025",
+    title: "Inorganic Chemistry",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Advanced Chemistry",
+    code: "CHE-601",
+    year: "2026",
+    title: "Advanced Chemistry",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — MATHEMATICS
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Mathematics",
+    code: "MAT-101",
+    year: "2025",
+    title: "Mathematics-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Mathematics",
+    code: "MAT-201",
+    year: "2025",
+    title: "Mathematics-II",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Mathematics",
+    code: "MAT-301",
+    year: "2024",
+    title: "Mathematics-III",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Differential Equations",
+    code: "MAT-401",
+    year: "2024",
+    title: "Differential Equations",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Abstract Algebra",
+    code: "MAT-501",
+    year: "2025",
+    title: "Abstract Algebra",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Advanced Mathematics",
+    code: "MAT-601",
+    year: "2026",
+    title: "Advanced Mathematics",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — ZOOLOGY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Zoology",
+    code: "ZOO-101",
+    year: "2025",
+    title: "Zoology-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Animal Diversity",
+    code: "ZOO-201",
+    year: "2025",
+    title: "Animal Diversity",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Cell Biology",
+    code: "ZOO-301",
+    year: "2024",
+    title: "Cell Biology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Genetics",
+    code: "ZOO-401",
+    year: "2024",
+    title: "Genetics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Evolution",
+    code: "ZOO-501",
+    year: "2025",
+    title: "Evolution",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Animal Physiology",
+    code: "ZOO-601",
+    year: "2026",
+    title: "Animal Physiology",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — BOTANY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Botany",
+    code: "BOT-101",
+    year: "2025",
+    title: "Botany-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Plant Diversity",
+    code: "BOT-201",
+    year: "2025",
+    title: "Plant Diversity",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Plant Anatomy",
+    code: "BOT-301",
+    year: "2024",
+    title: "Plant Anatomy",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Plant Physiology",
+    code: "BOT-401",
+    year: "2024",
+    title: "Plant Physiology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Ecology",
+    code: "BOT-501",
+    year: "2025",
+    title: "Ecology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Plant Biotechnology",
+    code: "BOT-601",
+    year: "2026",
+    title: "Plant Biotechnology",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — COMPUTER SCIENCE
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Computer Fundamentals",
+    code: "CSC-101",
+    year: "2025",
+    title: "Computer Fundamentals",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Programming in C",
+    code: "CSC-201",
+    year: "2025",
+    title: "Programming in C",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Data Structures",
+    code: "CSC-301",
+    year: "2024",
+    title: "Data Structures",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Database Management",
+    code: "CSC-401",
+    year: "2024",
+    title: "Database Management",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Operating Systems",
+    code: "CSC-501",
+    year: "2025",
+    title: "Operating Systems",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Computer Networks",
+    code: "CSC-601",
+    year: "2026",
+    title: "Computer Networks",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — ENGLISH
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "English Literature",
+    code: "ENG-101",
+    year: "2025",
+    title: "English Literature-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "English Literature",
+    code: "ENG-201",
+    year: "2025",
+    title: "English Literature-II",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "British Literature",
+    code: "ENG-301",
+    year: "2024",
+    title: "British Literature",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "Indian Writing in English",
+    code: "ENG-401",
+    year: "2024",
+    title: "Indian Writing in English",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Literary Criticism",
+    code: "ENG-501",
+    year: "2025",
+    title: "Literary Criticism",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "Modern Literature",
+    code: "ENG-601",
+    year: "2026",
+    title: "Modern Literature",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — HISTORY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "Ancient Indian History",
+    code: "HIS-101",
+    year: "2025",
+    title: "Ancient Indian History",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "Medieval Indian History",
+    code: "HIS-201",
+    year: "2025",
+    title: "Medieval Indian History",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "Modern Indian History",
+    code: "HIS-301",
+    year: "2024",
+    title: "Modern Indian History",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "World History",
+    code: "HIS-401",
+    year: "2024",
+    title: "World History",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Indian National Movement",
+    code: "HIS-501",
+    year: "2025",
+    title: "Indian National Movement",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "History of Assam",
+    code: "HIS-601",
+    year: "2026",
+    title: "History of Assam",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — POLITICAL SCIENCE
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "Political Theory",
+    code: "POL-101",
+    year: "2025",
+    title: "Political Theory",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "Indian Government",
+    code: "POL-201",
+    year: "2025",
+    title: "Indian Government and Politics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "Public Administration",
+    code: "POL-301",
+    year: "2024",
+    title: "Public Administration",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "International Relations",
+    code: "POL-401",
+    year: "2024",
+    title: "International Relations",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Comparative Politics",
+    code: "POL-501",
+    year: "2025",
+    title: "Comparative Politics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "Indian Political Thought",
+    code: "POL-601",
+    year: "2026",
+    title: "Indian Political Thought",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — EDUCATION
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "Foundations of Education",
+    code: "EDU-101",
+    year: "2025",
+    title: "Foundations of Education",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "Educational Psychology",
+    code: "EDU-201",
+    year: "2025",
+    title: "Educational Psychology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "Curriculum Studies",
+    code: "EDU-301",
+    year: "2024",
+    title: "Curriculum Studies",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "Educational Technology",
+    code: "EDU-401",
+    year: "2024",
+    title: "Educational Technology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Guidance and Counselling",
+    code: "EDU-501",
+    year: "2025",
+    title: "Guidance and Counselling",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "Inclusive Education",
+    code: "EDU-601",
+    year: "2026",
+    title: "Inclusive Education",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — ECONOMICS
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "Microeconomics",
+    code: "ECO-101",
+    year: "2025",
+    title: "Microeconomics-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "Macroeconomics",
+    code: "ECO-201",
+    year: "2025",
+    title: "Macroeconomics-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "Indian Economy",
+    code: "ECO-301",
+    year: "2024",
+    title: "Indian Economy",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "Public Finance",
+    code: "ECO-401",
+    year: "2024",
+    title: "Public Finance",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Development Economics",
+    code: "ECO-501",
+    year: "2025",
+    title: "Development Economics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "Econometrics",
+    code: "ECO-601",
+    year: "2026",
+    title: "Econometrics",
+    pdf: "#"
+},
+
+/* =========================================================
+   COMMERCE — ACCOUNTANCY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Commerce",
+    course: "B.Com",
+    semester: "1st
+        
+<script>
+
+/* =========================================================
+   PART 2 — NEP STUDY HUB
+   COMPLETE PAPER DATABASE
+   SCIENCE + ARTS + COMMERCE
+   ========================================================= */
+
+const studyPapers = [
+
+/* =========================================================
+   SCIENCE — PHYSICS
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Physics",
+    code: "PHY-101",
+    year: "2025",
+    title: "Physics-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Physics",
+    code: "PHY-201",
+    year: "2025",
+    title: "Physics-II",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Electromagnetic Theory",
+    code: "PHY-301",
+    year: "2024",
+    title: "Electromagnetic Theory",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Wave and Optics",
+    code: "PHY-401",
+    year: "2024",
+    title: "Wave and Optics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Quantum Mechanics",
+    code: "PHY-QM-501",
+    year: "2025",
+    title: "Quantum Mechanics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Electromagnetic Theory",
+    code: "PHY-EMT-502",
+    year: "2025",
+    title: "Electromagnetic Theory",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Physics",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Nuclear and Particle Physics",
+    code: "PHY-NP-601",
+    year: "2026",
+    title: "Nuclear and Particle Physics",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — CHEMISTRY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Chemistry",
+    code: "CHE-101",
+    year: "2025",
+    title: "Chemistry-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Chemistry",
+    code: "CHE-201",
+    year: "2025",
+    title: "Chemistry-II",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Organic Chemistry",
+    code: "CHE-301",
+    year: "2024",
+    title: "Organic Chemistry",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Physical Chemistry",
+    code: "CHE-401",
+    year: "2024",
+    title: "Physical Chemistry",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Inorganic Chemistry",
+    code: "CHE-501",
+    year: "2025",
+    title: "Inorganic Chemistry",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Chemistry",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Advanced Chemistry",
+    code: "CHE-601",
+    year: "2026",
+    title: "Advanced Chemistry",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — MATHEMATICS
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Mathematics",
+    code: "MAT-101",
+    year: "2025",
+    title: "Mathematics-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Mathematics",
+    code: "MAT-201",
+    year: "2025",
+    title: "Mathematics-II",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Mathematics",
+    code: "MAT-301",
+    year: "2024",
+    title: "Mathematics-III",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Differential Equations",
+    code: "MAT-401",
+    year: "2024",
+    title: "Differential Equations",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Abstract Algebra",
+    code: "MAT-501",
+    year: "2025",
+    title: "Abstract Algebra",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Mathematics",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Advanced Mathematics",
+    code: "MAT-601",
+    year: "2026",
+    title: "Advanced Mathematics",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — ZOOLOGY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Zoology",
+    code: "ZOO-101",
+    year: "2025",
+    title: "Zoology-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Animal Diversity",
+    code: "ZOO-201",
+    year: "2025",
+    title: "Animal Diversity",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Cell Biology",
+    code: "ZOO-301",
+    year: "2024",
+    title: "Cell Biology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Genetics",
+    code: "ZOO-401",
+    year: "2024",
+    title: "Genetics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Evolution",
+    code: "ZOO-501",
+    year: "2025",
+    title: "Evolution",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Zoology",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Animal Physiology",
+    code: "ZOO-601",
+    year: "2026",
+    title: "Animal Physiology",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — BOTANY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Botany",
+    code: "BOT-101",
+    year: "2025",
+    title: "Botany-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Plant Diversity",
+    code: "BOT-201",
+    year: "2025",
+    title: "Plant Diversity",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Plant Anatomy",
+    code: "BOT-301",
+    year: "2024",
+    title: "Plant Anatomy",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Plant Physiology",
+    code: "BOT-401",
+    year: "2024",
+    title: "Plant Physiology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Ecology",
+    code: "BOT-501",
+    year: "2025",
+    title: "Ecology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Botany",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Plant Biotechnology",
+    code: "BOT-601",
+    year: "2026",
+    title: "Plant Biotechnology",
+    pdf: "#"
+},
+
+/* =========================================================
+   SCIENCE — COMPUTER SCIENCE
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "1st Semester",
+    subject: "Computer Fundamentals",
+    code: "CSC-101",
+    year: "2025",
+    title: "Computer Fundamentals",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "2nd Semester",
+    subject: "Programming in C",
+    code: "CSC-201",
+    year: "2025",
+    title: "Programming in C",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "3rd Semester",
+    subject: "Data Structures",
+    code: "CSC-301",
+    year: "2024",
+    title: "Data Structures",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "4th Semester",
+    subject: "Database Management",
+    code: "CSC-401",
+    year: "2024",
+    title: "Database Management",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "5th Semester",
+    subject: "Operating Systems",
+    code: "CSC-501",
+    year: "2025",
+    title: "Operating Systems",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Computer Science",
+    course: "B.Sc",
+    semester: "6th Semester",
+    subject: "Computer Networks",
+    code: "CSC-601",
+    year: "2026",
+    title: "Computer Networks",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — ENGLISH
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "English Literature",
+    code: "ENG-101",
+    year: "2025",
+    title: "English Literature-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "English Literature",
+    code: "ENG-201",
+    year: "2025",
+    title: "English Literature-II",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "British Literature",
+    code: "ENG-301",
+    year: "2024",
+    title: "British Literature",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "Indian Writing in English",
+    code: "ENG-401",
+    year: "2024",
+    title: "Indian Writing in English",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Literary Criticism",
+    code: "ENG-501",
+    year: "2025",
+    title: "Literary Criticism",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "English",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "Modern Literature",
+    code: "ENG-601",
+    year: "2026",
+    title: "Modern Literature",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — HISTORY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "Ancient Indian History",
+    code: "HIS-101",
+    year: "2025",
+    title: "Ancient Indian History",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "Medieval Indian History",
+    code: "HIS-201",
+    year: "2025",
+    title: "Medieval Indian History",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "Modern Indian History",
+    code: "HIS-301",
+    year: "2024",
+    title: "Modern Indian History",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "World History",
+    code: "HIS-401",
+    year: "2024",
+    title: "World History",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Indian National Movement",
+    code: "HIS-501",
+    year: "2025",
+    title: "Indian National Movement",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "History",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "History of Assam",
+    code: "HIS-601",
+    year: "2026",
+    title: "History of Assam",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — POLITICAL SCIENCE
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "Political Theory",
+    code: "POL-101",
+    year: "2025",
+    title: "Political Theory",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "Indian Government",
+    code: "POL-201",
+    year: "2025",
+    title: "Indian Government and Politics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "Public Administration",
+    code: "POL-301",
+    year: "2024",
+    title: "Public Administration",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "International Relations",
+    code: "POL-401",
+    year: "2024",
+    title: "International Relations",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Comparative Politics",
+    code: "POL-501",
+    year: "2025",
+    title: "Comparative Politics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Political Science",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "Indian Political Thought",
+    code: "POL-601",
+    year: "2026",
+    title: "Indian Political Thought",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — EDUCATION
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "Foundations of Education",
+    code: "EDU-101",
+    year: "2025",
+    title: "Foundations of Education",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "Educational Psychology",
+    code: "EDU-201",
+    year: "2025",
+    title: "Educational Psychology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "Curriculum Studies",
+    code: "EDU-301",
+    year: "2024",
+    title: "Curriculum Studies",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "Educational Technology",
+    code: "EDU-401",
+    year: "2024",
+    title: "Educational Technology",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Guidance and Counselling",
+    code: "EDU-501",
+    year: "2025",
+    title: "Guidance and Counselling",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Education",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "Inclusive Education",
+    code: "EDU-601",
+    year: "2026",
+    title: "Inclusive Education",
+    pdf: "#"
+},
+
+/* =========================================================
+   ARTS — ECONOMICS
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "1st Semester",
+    subject: "Microeconomics",
+    code: "ECO-101",
+    year: "2025",
+    title: "Microeconomics-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "2nd Semester",
+    subject: "Macroeconomics",
+    code: "ECO-201",
+    year: "2025",
+    title: "Macroeconomics-I",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "3rd Semester",
+    subject: "Indian Economy",
+    code: "ECO-301",
+    year: "2024",
+    title: "Indian Economy",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "4th Semester",
+    subject: "Public Finance",
+    code: "ECO-401",
+    year: "2024",
+    title: "Public Finance",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "5th Semester",
+    subject: "Development Economics",
+    code: "ECO-501",
+    year: "2025",
+    title: "Development Economics",
+    pdf: "#"
+},
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Economics",
+    course: "B.A",
+    semester: "6th Semester",
+    subject: "Econometrics",
+    code: "ECO-601",
+    year: "2026",
+    title: "Econometrics",
+    pdf: "#"
+},
+
+/* =========================================================
+   COMMERCE — ACCOUNTANCY
+   ========================================================= */
+
+{
+    type: "university",
+    university: "Bodoland University",
+    department: "Commerce",
+    course: "B.Com",
+    semester: "1st
 </body>
 </html>
