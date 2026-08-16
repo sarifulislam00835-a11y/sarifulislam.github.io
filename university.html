@@ -285,13 +285,33 @@ footer{
 
         <div class="field">
             <label>University</label>
+<select id="university">
+    <option value="">Select University</option>
 
-            <select id="university">
-                <option value="">Select University</option>
-                <option value="Bodoland University">
-                    Bodoland University
-                </option>
-            </select>
+    <option value="Assam University">Assam University</option>
+    <option value="Tezpur University">Tezpur University</option>
+    <option value="Gauhati University">Gauhati University</option>
+    <option value="Dibrugarh University">Dibrugarh University</option>
+    <option value="Cotton University">Cotton University</option>
+    <option value="Bodoland University">Bodoland University</option>
+    <option value="Assam Science and Technology University">Assam Science and Technology University</option>
+    <option value="Assam Agricultural University">Assam Agricultural University</option>
+    <option value="Krishna Kanta Handiqui State Open University">Krishna Kanta Handiqui State Open University</option>
+    <option value="Kumar Bhaskar Varma Sanskrit and Ancient Studies University">Kumar Bhaskar Varma Sanskrit and Ancient Studies University</option>
+    <option value="Assam Women's University">Assam Women's University</option>
+    <option value="Majuli University of Culture">Majuli University of Culture</option>
+    <option value="Madhabdev University">Madhabdev University</option>
+    <option value="Bhattadev University">Bhattadev University</option>
+    <option value="Rabindranath Tagore University">Rabindranath Tagore University</option>
+    <option value="Assam Rajiv Gandhi University of Cooperative Management">Assam Rajiv Gandhi University of Cooperative Management</option>
+    <option value="Assam Don Bosco University">Assam Don Bosco University</option>
+    <option value="Royal Global University">Royal Global University</option>
+    <option value="Kaziranga University">Kaziranga University</option>
+    <option value="Down Town University">Down Town University</option>
+    <option value="Mahapurusha Srimanta Sankaradeva Viswavidyalaya">Mahapurusha Srimanta Sankaradeva Viswavidyalaya</option>
+    <option value="Krishnaguru Adhyatmik Visvavidyalaya">Krishnaguru Adhyatmik Visvavidyalaya</option>
+</select>
+            
         </div>
 
 
@@ -312,12 +332,7 @@ footer{
 
             <select id="department">
                 <option value="">Select Department</option>
-                <option value="Physics">Physics</option>
-                <option value="Chemistry">Chemistry</option>
-                <option value="Mathematics">Mathematics</option>
-                <option value="Zoology">Zoology</option>
-                <option value="Botany">Botany</option>
-                <option value="Commerce">Commerce</option>
+                
             </select>
         </div>
 
@@ -325,14 +340,9 @@ footer{
         <div class="field">
             <label>Course</label>
 
-            <select id="course">
-                <option value="">Select Course</option>
-                <option value="B.Sc">B.Sc</option>
-                <option value="B.A">B.A</option>
-                <option value="B.Com">B.Com</option>
-                <option value="M.Sc">M.Sc</option>
-                <option value="M.A">M.A</option>
-            </select>
+          <select id="course">
+    <option value="">Select Course</option>
+</select>  
         </div>
 
 
@@ -347,6 +357,8 @@ footer{
                 <option>4th Semester</option>
                 <option>5th Semester</option>
                 <option>6th Semester</option>
+                <option>7th Semester</option>
+<option>8th Semester</option>
             </select>
         </div>
 
@@ -360,7 +372,6 @@ footer{
                 <option>2025</option>
                 <option>2024</option>
                 <option>2023</option>
-                <option>2022</option>
             </select>
         </div>
 
@@ -713,7 +724,122 @@ course.addEventListener("change",showPapers);
 semester.addEventListener("change",showPapers);
 year.addEventListener("change",showPapers);
 search.addEventListener("input",showPapers);
+university.addEventListener("change",showPapers);
+stream.addEventListener("change",showPapers);
+department.addEventListener("change",showPapers);
+course.addEventListener("change",showPapers);
+semester.addEventListener("change",showPapers);
+year.addEventListener("change",showPapers);
+search.addEventListener("input",showPapers);
+const departments = {
 
+    Science: [
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Botany",
+        "Zoology",
+        "Computer Science",
+        "Statistics",
+        "Geology",
+        "Geography",
+        "Environmental Science"
+    ],
+
+    Arts: [
+        "English",
+        "Assamese",
+        "Bengali",
+        "Hindi",
+        "History",
+        "Political Science",
+        "Economics",
+        "Education",
+        "Philosophy",
+        "Sociology",
+        "Geography",
+        "Psychology",
+        "Anthropology"
+    ],
+
+    Commerce: [
+        "Accountancy",
+        "Finance",
+        "Management",
+        "Marketing",
+        "Business Administration",
+        "Economics"
+    ]
+
+};
+
+stream.addEventListener("change", function(){
+
+    department.innerHTML =
+        '<option value="">Select Department</option>';
+
+    const selectedStream = stream.value;
+
+    if(departments[selectedStream]){
+
+        departments[selectedStream].forEach(function(dept){
+
+            const option = document.createElement("option");
+
+            option.value = dept;
+            option.textContent = dept;
+
+            department.appendChild(option);
+
+        });
+
+    }
+
+});
+
+const courses = {
+
+    Science: [
+        "B.Sc",
+        "M.Sc"
+    ],
+
+    Arts: [
+        "B.A",
+        "M.A"
+    ],
+
+    Commerce: [
+        "B.Com",
+        "M.Com"
+    ]
+
+};
+
+stream.addEventListener("change", function(){
+
+    course.innerHTML =
+        '<option value="">Select Course</option>';
+
+    const selectedStream = stream.value;
+
+    if(courses[selectedStream]){
+
+        courses[selectedStream].forEach(function(item){
+
+            const option =
+                document.createElement("option");
+
+            option.value = item;
+            option.textContent = item;
+
+            course.appendChild(option);
+
+        });
+
+    }
+
+});    
 </script>
 
 </body>
