@@ -1487,3 +1487,177 @@ a {
     }
 
 }
+/* =========================================
+   CURRENT RESEARCH — PREMIUM
+========================================= */
+
+.research-section{
+    padding:110px 8%;
+    background:#f7f8fc;
+}
+
+.research-feature{
+    max-width:1150px;
+    margin:55px auto 0;
+
+    display:grid;
+    grid-template-columns:110px 1fr;
+
+    background:#ffffff;
+
+    border:1px solid #e1e5ed;
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 14px 40px rgba(20,30,60,.07);
+
+    transition:.3s ease;
+}
+
+.research-feature:hover{
+    transform:translateY(-6px);
+
+    border-color:#3155d9;
+
+    box-shadow:0 22px 55px rgba(20,30,60,.11);
+}
+
+.research-feature-number{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+
+    padding-top:35px;
+
+    background:#172033;
+    color:#ffffff;
+
+    font-size:18px;
+    font-weight:800;
+}
+
+.research-feature-content{
+    padding:40px 45px;
+}
+
+.research-type{
+    margin:0 0 14px;
+
+    color:#3155d9;
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:1.5px;
+}
+
+.research-feature-content h3{
+    max-width:850px;
+
+    margin:0 0 18px;
+
+    color:#172033;
+
+    font-size:30px;
+    line-height:1.25;
+
+    letter-spacing:-.6px;
+}
+
+.research-description{
+    max-width:850px;
+
+    margin:0 0 25px;
+
+    color:#687386;
+
+    font-size:15px;
+    line-height:1.8;
+}
+
+.research-tags{
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-bottom:28px;
+}
+
+.research-tags span{
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:#eef2ff;
+    color:#3155d9;
+
+    font-size:11px;
+    font-weight:700;
+}
+
+.research-status{
+    display:flex;
+    align-items:center;
+
+    gap:9px;
+
+    padding-top:18px;
+
+    border-top:1px solid #edf0f5;
+
+    color:#6f7888;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+.status-dot{
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#3155d9;
+
+    box-shadow:0 0 0 4px rgba(49,85,217,.10);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:700px){
+
+    .research-section{
+        padding:75px 20px;
+    }
+
+    .research-feature{
+        grid-template-columns:1fr;
+        margin-top:40px;
+    }
+
+    .research-feature-number{
+        justify-content:flex-start;
+
+        padding:16px 22px;
+
+        font-size:14px;
+    }
+
+    .research-feature-content{
+        padding:28px 22px;
+    }
+
+    .research-feature-content h3{
+        font-size:23px;
+    }
+
+    .research-description{
+        font-size:14px;
+    }
+
+}
