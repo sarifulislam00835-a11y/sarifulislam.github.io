@@ -1661,3 +1661,168 @@ a {
     }
 
 }
+/* =========================================
+   PREMIUM ARTICLES SECTION
+========================================= */
+
+.articles-section{
+    padding:110px 8%;
+    background:#ffffff;
+}
+
+.articles-grid{
+    max-width:1000px;
+    margin:55px auto 0;
+}
+
+.article-card{
+    background:#172033;
+    color:#ffffff;
+
+    border-radius:26px;
+    padding:40px;
+
+    box-shadow:0 15px 45px rgba(20,30,60,.12);
+
+    transition:.3s ease;
+}
+
+.article-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 25px 60px rgba(20,30,60,.18);
+}
+
+.article-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:28px;
+}
+
+.article-number{
+    font-size:14px;
+    font-weight:800;
+    color:#8f9ac0;
+}
+
+.article-type{
+    color:#8fa4ff;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.4px;
+}
+
+.article-content h3{
+    font-size:34px;
+    line-height:1.2;
+    margin-bottom:18px;
+    letter-spacing:-.6px;
+}
+
+.article-content p{
+    max-width:780px;
+
+    color:#c4cad8;
+    font-size:15px;
+    line-height:1.8;
+
+    margin-bottom:25px;
+}
+
+.article-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:30px;
+}
+
+.article-tags span{
+    padding:6px 12px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+    color:#dbe1f2;
+
+    font-size:11px;
+    font-weight:700;
+}
+
+.article-bottom{
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.article-bottom > span{
+    color:#929bb0;
+    font-size:12px;
+}
+
+.article-link{
+    color:#ffffff;
+    text-decoration:none;
+
+    font-size:13px;
+    font-weight:800;
+
+    transition:.2s;
+}
+
+.article-link:hover{
+    color:#8fa4ff;
+    transform:translateX(3px);
+}
+
+.articles-more{
+    max-width:1000px;
+    margin:30px auto 0;
+
+    text-align:center;
+}
+
+.articles-more p{
+    color:#858e9f;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+
+    .articles-section{
+        padding:75px 20px;
+    }
+
+    .articles-grid{
+        margin-top:40px;
+    }
+
+    .article-card{
+        padding:27px 22px;
+        border-radius:21px;
+    }
+
+    .article-content h3{
+        font-size:27px;
+    }
+
+    .article-content p{
+        font-size:14px;
+    }
+
+    .article-bottom{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+}
