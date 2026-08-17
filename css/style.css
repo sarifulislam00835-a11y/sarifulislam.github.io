@@ -2186,3 +2186,253 @@ a {
     }
 
 }
+/* =========================================
+   PREMIUM NAVIGATION
+========================================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    width:100%;
+
+    background:rgba(255,255,255,.94);
+
+    border-bottom:1px solid #e8ebf2;
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+}
+
+.nav-container{
+    max-width:1250px;
+
+    min-height:76px;
+
+    margin:auto;
+    padding:0 30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+/* LOGO */
+
+.navbar .logo{
+    color:#172033;
+
+    text-decoration:none;
+
+    font-size:25px;
+    font-weight:850;
+
+    letter-spacing:-.8px;
+
+    flex-shrink:0;
+}
+
+.navbar .logo span{
+    color:#3155d9;
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+
+    gap:5px;
+}
+
+.nav-links a{
+    position:relative;
+
+    padding:10px 12px;
+
+    color:#5f697b;
+
+    text-decoration:none;
+
+    font-size:13px;
+    font-weight:700;
+
+    border-radius:9px;
+
+    transition:
+        color .2s ease,
+        background .2s ease;
+}
+
+.nav-links a:hover{
+    color:#3155d9;
+    background:#f1f4ff;
+}
+
+
+/* ACTIVE-LIKE UNDERLINE */
+
+.nav-links a::after{
+    content:"";
+
+    position:absolute;
+
+    left:12px;
+    right:12px;
+    bottom:4px;
+
+    height:2px;
+
+    background:#3155d9;
+
+    border-radius:10px;
+
+    transform:scaleX(0);
+
+    transform-origin:center;
+
+    transition:transform .2s ease;
+}
+
+.nav-links a:hover::after{
+    transform:scaleX(1);
+}
+
+
+/* STUDY HUB */
+
+.nav-links .study-link{
+    color:#ffffff;
+
+    background:#3155d9;
+
+    padding:10px 15px;
+
+    margin-left:4px;
+}
+
+.nav-links .study-link:hover{
+    color:#ffffff;
+
+    background:#263fae;
+}
+
+.nav-links .study-link::after{
+    display:none;
+}
+
+
+/* MOBILE BUTTON */
+
+.menu-btn{
+    display:none;
+
+    border:0;
+
+    background:#f1f4ff;
+
+    color:#172033;
+
+    width:42px;
+    height:42px;
+
+    border-radius:11px;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:1000px){
+
+    .nav-container{
+        padding:0 20px;
+    }
+
+    .nav-links{
+        gap:0;
+    }
+
+    .nav-links a{
+        padding:9px 8px;
+        font-size:12px;
+    }
+
+    .nav-links .study-link{
+        padding:9px 11px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:760px){
+
+    .nav-container{
+        min-height:68px;
+        padding:0 18px;
+    }
+
+    .menu-btn{
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+    }
+
+    .nav-links{
+        position:absolute;
+
+        top:68px;
+        left:15px;
+        right:15px;
+
+        display:none;
+
+        flex-direction:column;
+        align-items:stretch;
+
+        padding:10px;
+
+        background:#ffffff;
+
+        border:1px solid #e5e8ef;
+
+        border-radius:16px;
+
+        box-shadow:0 18px 40px rgba(20,30,60,.13);
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-links a{
+        width:100%;
+
+        padding:13px 14px;
+
+        font-size:14px;
+    }
+
+    .nav-links a::after{
+        display:none;
+    }
+
+    .nav-links .study-link{
+        margin:3px 0 0;
+        text-align:center;
+    }
+
+}
