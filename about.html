@@ -1,707 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About | Sariful Islam</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family: "Segoe UI", Arial, sans-serif;
-    background:#f7f8fc;
-    color:#18202f;
-    line-height:1.7;
-}
-
-/* ---------- HERO ---------- */
-
-.hero{
-    min-height:520px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:80px 20px;
-    background:
-        radial-gradient(circle at top left, rgba(64,115,255,.25), transparent 35%),
-        linear-gradient(135deg,#07152f,#102f62 55%,#07152f);
-    color:white;
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.profile-image{
-    width:155px;
-    height:155px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid rgba(255,255,255,.9);
-    box-shadow:0 15px 45px rgba(0,0,0,.35);
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-size:clamp(42px,7vw,72px);
-    letter-spacing:-2px;
-    margin-bottom:12px;
-}
-
-.hero h1 span{
-    color:#8fb5ff;
-}
-
-.hero-subtitle{
-    font-size:19px;
-    color:#d9e4ff;
-    margin-bottom:28px;
-}
-
-.hero-description{
-    max-width:700px;
-    margin:auto;
-    color:#bfcce4;
-    font-size:16px;
-}
-
-/* ---------- MAIN ---------- */
-
-.container{
-    width:92%;
-    max-width:1100px;
-    margin:0 auto;
-}
-
-/* ---------- INTRO ---------- */
-
-.intro{
-    margin-top:-65px;
-    position:relative;
-    background:white;
-    padding:45px;
-    border-radius:22px;
-    box-shadow:0 20px 60px rgba(20,40,80,.10);
-}
-
-.section-label{
-    color:#4779df;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:8px;
-}
-
-.section-title{
-    font-size:34px;
-    margin-bottom:18px;
-    color:#101a2d;
-}
-
-.intro p{
-    color:#596579;
-    font-size:17px;
-    max-width:900px;
-}
-
-/* ---------- STATS ---------- */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    margin:35px 0;
-}
-
-.stat{
-    background:white;
-    padding:25px 15px;
-    text-align:center;
-    border-radius:18px;
-    box-shadow:0 8px 30px rgba(20,40,80,.07);
-    border:1px solid #edf0f6;
-}
-
-.stat strong{
-    display:block;
-    font-size:30px;
-    color:#3268d7;
-}
-
-.stat span{
-    font-size:14px;
-    color:#697386;
-}
-
-/* ---------- SECTIONS ---------- */
-
-.section{
-    margin:70px 0;
-}
-
-.section-header{
-    margin-bottom:30px;
-}
-
-.section-header p{
-    color:#697386;
-}
-
-/* ---------- TIMELINE ---------- */
-
-.timeline{
-    position:relative;
-    margin-top:35px;
-    padding-left:30px;
-}
-
-.timeline:before{
-    content:"";
-    position:absolute;
-    left:7px;
-    top:0;
-    bottom:0;
-    width:2px;
-    background:#d8e2f8;
-}
-
-.timeline-item{
-    position:relative;
-    margin-bottom:35px;
-}
-
-.timeline-item:before{
-    content:"";
-    position:absolute;
-    left:-29px;
-    top:7px;
-    width:13px;
-    height:13px;
-    border-radius:50%;
-    background:#4779df;
-    box-shadow:0 0 0 5px #e8efff;
-}
-
-.timeline-year{
-    color:#4779df;
-    font-size:14px;
-    font-weight:700;
-}
-
-.timeline-item h3{
-    margin:5px 0;
-    font-size:21px;
-}
-
-.timeline-item p{
-    color:#697386;
-}
-
-/* ---------- CARDS ---------- */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.card{
-    background:white;
-    padding:28px;
-    border-radius:20px;
-    border:1px solid #edf0f6;
-    box-shadow:0 10px 35px rgba(20,40,80,.06);
-    transition:.3s ease;
-}
-
-.card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 18px 45px rgba(20,40,80,.12);
-}
-
-.card-icon{
-    font-size:30px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    margin-bottom:8px;
-    font-size:20px;
-}
-
-.card p{
-    color:#697386;
-    font-size:15px;
-}
-
-/* ---------- MISSION ---------- */
-
-.mission{
-    background:linear-gradient(135deg,#0a1b3d,#163d78);
-    color:white;
-    padding:55px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 20px 50px rgba(10,30,70,.20);
-}
-
-.mission h2{
-    font-size:34px;
-    margin-bottom:15px;
-}
-
-.mission p{
-    max-width:750px;
-    margin:auto;
-    color:#d7e3fa;
-    font-size:17px;
-}
-
-/* ---------- FOOTER ---------- */
-
-footer{
-    margin-top:80px;
-    padding:30px 20px;
-    background:#07152f;
-    color:#aebbd1;
-    text-align:center;
-    font-size:14px;
-}
-
-/* ---------- MOBILE ---------- */
-
-@media(max-width:800px){
-
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .intro{
-        padding:30px 24px;
-    }
-
-    .mission{
-        padding:40px 25px;
-    }
-}
-
-@media(max-width:500px){
-
-    .hero{
-        min-height:480px;
-        padding:60px 18px;
-    }
-
-    .profile-image{
-        width:125px;
-        height:125px;
-    }
-
-    .hero h1{
-        font-size:42px;
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .section-title{
-        font-size:28px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <img
-            src="profile.jpg"
-            alt="Sariful Islam"
-            class="profile-image"
-        >
-
-        <h1>Sariful <span>Islam</span></h1>
-
-        <p class="hero-subtitle">
-            Writer • Researcher • Physics Student • Content Creator
-        </p>
-
-        <p class="hero-description">
-            Exploring the intersection of science, research, education,
-            technology and creative expression.
-        </p>
-
-    </div>
-
-</section>
-
-
-<main class="container">
-
-<!-- INTRODUCTION -->
-
-<section class="intro">
-
-    <div class="section-label">About Me</div>
-
-    <h2 class="section-title">
-        A Journey Driven by Curiosity
-    </h2>
-
-    <p>
-        Welcome to my personal space on the web. I am passionate about
-        science, research, writing and education. Through my work, I aim
-        to explore ideas, communicate knowledge and create meaningful
-        educational content for others.
-    </p>
-
-</section>
-
-
-<!-- QUICK STATS -->
-
-<section class="stats">
-
-    <div class="stat">
-        <strong>01</strong>
-        <span>Academic Field</span>
-    </div>
-
-    <div class="stat">
-        <strong>04+</strong>
-        <span>Areas of Interest</span>
-    </div>
-
-    <div class="stat">
-        <strong>∞</strong>
-        <span>Ideas to Explore</span>
-    </div>
-
-    <div class="stat">
-        <strong>01</strong>
-        <span>Vision</span>
-    </div>
-
-</section>
-
-
-<!-- EDUCATION -->
-
-<section class="section">
-
-    <div class="section-header">
-        <div class="section-label">Education</div>
-
-        <h2 class="section-title">
-            Academic Journey
-        </h2>
+<div class="container">
+
+    <!-- PROFILE HERO -->
+    <section class="about-hero">
+        <div class="profile">
+            <img src="profile.jpg" alt="Sariful Islam">
+
+            <div class="profile-info">
+                <span class="profile-label">ABOUT THE AUTHOR</span>
+
+                <h1>Sariful Islam</h1>
+
+                <p class="profession">
+                    Writer • Researcher • Physics Student • Content Creator
+                </p>
+
+                <p class="intro">
+                    Welcome to my personal space. I am passionate about
+                    science, education, research, writing, and technology.
+                    This website represents my academic journey, achievements,
+                    ideas, publications, and experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT ME -->
+    <section class="about-section">
+        <span class="section-label">01 — ABOUT ME</span>
+        <h2>Who I Am</h2>
 
         <p>
-            A timeline of my educational journey and academic development.
+            I am a student, writer, and aspiring researcher with a strong
+            interest in science, education, technology, and knowledge sharing.
+            My journey is shaped by curiosity, learning, creativity, and the
+            desire to make complex ideas easier to understand.
         </p>
-    </div>
+
+        <p>
+            More information about my journey, experiences, interests,
+            and achievements will be added here.
+        </p>
+    </section>
 
 
-    <div class="timeline">
+    <!-- EDUCATION -->
+    <section class="about-section">
+        <span class="section-label">02 — EDUCATION</span>
+        <h2>Academic Journey</h2>
 
-        <div class="timeline-item">
+        <div class="info-card">
+            <div class="card-icon">🎓</div>
 
-            <div class="timeline-year">
-                SCHOOLING
+            <div>
+                <h3>B.Sc. Physics</h3>
+                <p>Institution Name</p>
+                <span>Year — Present / Completed</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ACHIEVEMENTS -->
+    <section class="about-section">
+        <span class="section-label">03 — ACHIEVEMENTS</span>
+        <h2>Achievements & Awards</h2>
+
+        <div class="cards-grid">
+
+            <div class="achievement-card">
+                <span class="achievement-icon">🏆</span>
+                <h3>Achievement Title</h3>
+                <p>
+                    Competition or award details will be added here.
+                </p>
+                <span class="year">YEAR</span>
             </div>
 
-            <h3>School Education</h3>
-
-            <p>
-                School name, location and important academic details
-                will be added here.
-            </p>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="timeline-year">
-                HIGHER SECONDARY
+            <div class="achievement-card">
+                <span class="achievement-icon">🥇</span>
+                <h3>Competition / Award</h3>
+                <p>
+                    Position, level, and organization details.
+                </p>
+                <span class="year">YEAR</span>
             </div>
 
-            <h3>Higher Secondary Education</h3>
-
-            <p>
-                Institution, stream, subjects and year will be added here.
-            </p>
-
         </div>
+    </section>
 
 
-        <div class="timeline-item">
+    <!-- PARTICIPATION -->
+    <section class="about-section">
+        <span class="section-label">04 — PARTICIPATION</span>
+        <h2>Programs & Experiences</h2>
 
-            <div class="timeline-year">
-                UNIVERSITY
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <span class="timeline-dot"></span>
+
+                <div>
+                    <span class="timeline-year">YEAR</span>
+                    <h3>Program / Event Name</h3>
+                    <p>
+                        Details about participation, event, organization,
+                        and experience.
+                    </p>
+                </div>
             </div>
 
-            <h3>B.Sc. Physics</h3>
+            <div class="timeline-item">
+                <span class="timeline-dot"></span>
 
-            <p>
-                University/institution details and academic information
-                will be added here.
-            </p>
+                <div>
+                    <span class="timeline-year">YEAR</span>
+                    <h3>National / State / District Program</h3>
+                    <p>
+                        Participation details will be added here.
+                    </p>
+                </div>
+            </div>
 
         </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- ACHIEVEMENTS -->
+    <!-- CERTIFICATES -->
+    <section class="about-section">
+        <span class="section-label">05 — RECOGNITION</span>
+        <h2>Certificates & Recognition</h2>
 
-<section class="section">
+        <div class="cards-grid">
 
-    <div class="section-header">
+            <div class="certificate-card">
+                <div class="certificate-image">
+                    <span>Certificate</span>
+                </div>
 
-        <div class="section-label">Recognition</div>
+                <div class="certificate-content">
+                    <h3>Certificate Title</h3>
+                    <p>Issued by Organization</p>
+                    <span>YEAR</span>
+                </div>
+            </div>
 
-        <h2 class="section-title">
-            Achievements & Recognition
-        </h2>
+        </div>
+    </section>
+
+
+    <!-- RESEARCH -->
+    <section class="about-section">
+        <span class="section-label">06 — RESEARCH</span>
+        <h2>Research Interests</h2>
+
+        <div class="interest-tags">
+            <span>Physics</span>
+            <span>Science Education</span>
+            <span>Artificial Intelligence</span>
+            <span>Technology</span>
+            <span>Research</span>
+        </div>
+    </section>
+
+
+    <!-- PUBLICATIONS -->
+    <section class="about-section">
+        <span class="section-label">07 — PUBLICATIONS</span>
+        <h2>Books, Articles & Research</h2>
+
+        <div class="cards-grid">
+
+            <div class="publication-card">
+                <span class="publication-type">BOOK</span>
+                <h3>Publication Title</h3>
+                <p>
+                    Books, articles, research papers, and educational
+                    resources will appear here.
+                </p>
+            </div>
+
+            <div class="publication-card">
+                <span class="publication-type">ARTICLE</span>
+                <h3>Article Title</h3>
+                <p>
+                    Publication information will be added here.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="about-section">
+        <span class="section-label">08 — EXPERTISE</span>
+        <h2>Skills & Interests</h2>
+
+        <div class="skills">
+
+            <span>Writing</span>
+            <span>Public Speaking</span>
+            <span>Debate</span>
+            <span>Research</span>
+            <span>Teaching</span>
+            <span>Content Creation</span>
+            <span>Technology</span>
+            <span>AI</span>
+
+        </div>
+    </section>
+
+
+    <!-- MISSION -->
+    <section class="mission-section">
+
+        <span class="section-label">09 — MISSION</span>
+
+        <h2>Making Knowledge Accessible</h2>
 
         <p>
-            Awards, prizes, recognitions and milestones from my journey.
+            My mission is to learn continuously, explore ideas, and share
+            knowledge in a simple, meaningful, and accessible way.
         </p>
 
-    </div>
+    </section>
 
 
-    <div class="cards">
+    <!-- CLOSING -->
+    <section class="about-closing">
 
-        <div class="card">
-
-            <div class="card-icon">🏆</div>
-
-            <h3>Awards</h3>
-
-            <p>
-                Important awards and recognitions will be displayed here.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">🥇</div>
-
-            <h3>Prizes</h3>
-
-            <p>
-                Academic, literary or other competition achievements.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">📜</div>
-
-            <h3>Certificates</h3>
-
-            <p>
-                Professional and academic certificates will be showcased
-                here.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- RESEARCH -->
-
-<section class="section">
-
-    <div class="section-header">
-
-        <div class="section-label">Research</div>
-
-        <h2 class="section-title">
-            Areas I Explore
-        </h2>
-
-    </div>
-
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="card-icon">⚛️</div>
-
-            <h3>Physics</h3>
-
-            <p>
-                Exploring scientific concepts, physics and the fundamental
-                principles behind the natural world.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">🔬</div>
-
-            <h3>Science Education</h3>
-
-            <p>
-                Making scientific knowledge simpler, clearer and more
-                accessible.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">🤖</div>
-
-            <h3>Artificial Intelligence</h3>
-
-            <p>
-                Exploring AI, technology and their potential in education
-                and knowledge.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PUBLICATIONS -->
-
-<section class="section">
-
-    <div class="section-header">
-
-        <div class="section-label">Creative Work</div>
-
-        <h2 class="section-title">
-            Books, Articles & Publications
-        </h2>
+        <h2>The Journey Continues.</h2>
 
         <p>
-            My writing and published work will be collected and presented
-            here.
+            Every achievement is a milestone, every experience is a lesson,
+            and every new idea is an opportunity to learn something more.
         </p>
 
-    </div>
+    </section>
 
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="card-icon">📚</div>
-
-            <h3>Books</h3>
-
-            <p>
-                Explore my books and literary work.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">✍️</div>
-
-            <h3>Articles</h3>
-
-            <p>
-                Read my articles, essays and ideas.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">📄</div>
-
-            <h3>Research Papers</h3>
-
-            <p>
-                Academic and research publications will appear here.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- MISSION -->
-
-<section class="section">
-
-    <div class="mission">
-
-        <div class="section-label">
-            My Vision
-        </div>
-
-        <h2>
-            Knowledge Should Be Simple, Accessible & Meaningful
-        </h2>
-
-        <p>
-            My mission is to learn continuously, explore meaningful ideas
-            and share knowledge in ways that can inspire curiosity and
-            create value for others.
-        </p>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-    © 2026 Sariful Islam · All Rights Reserved.
-
-</footer>
-
-</body>
-</html>
+</div>
