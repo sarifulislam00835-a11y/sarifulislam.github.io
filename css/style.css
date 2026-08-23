@@ -2436,3 +2436,746 @@ a {
     }
 
 }
+/* =========================================
+   ABOUT PAGE — PREMIUM HERO
+========================================= */
+
+.about-hero{
+    max-width:1150px;
+    margin:0 auto;
+    padding:90px 30px;
+
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    align-items:center;
+    gap:70px;
+}
+
+.about-hero-content{
+    max-width:650px;
+}
+
+.about-hero h1{
+    margin:10px 0 10px;
+
+    font-size:clamp(42px,6vw,68px);
+    line-height:1.05;
+    letter-spacing:-2px;
+
+    color:#172033;
+}
+
+.about-hero h1 span{
+    color:#3155d9;
+}
+
+.about-hero h2{
+    margin:0 0 20px;
+
+    font-size:20px;
+    font-weight:700;
+
+    color:#566176;
+}
+
+.about-hero-text{
+    max-width:600px;
+
+    color:#687386;
+
+    font-size:16px;
+    line-height:1.85;
+}
+
+.about-hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+
+    margin-top:30px;
+}
+
+.about-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-size:13px;
+    font-weight:800;
+
+    transition:.25s ease;
+}
+
+.about-btn.primary{
+    color:#ffffff;
+    background:#3155d9;
+}
+
+.about-btn.primary:hover{
+    background:#263fae;
+    transform:translateY(-2px);
+}
+
+.about-btn.secondary{
+    color:#3155d9;
+
+    background:#eef2ff;
+
+    border:1px solid #dce3ff;
+}
+
+.about-btn.secondary:hover{
+    background:#e4e9ff;
+    transform:translateY(-2px);
+}
+
+.about-hero-image{
+    display:flex;
+    justify-content:center;
+}
+
+.about-hero-image img{
+    width:min(100%,360px);
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    border-radius:26px;
+
+    box-shadow:0 25px 60px rgba(20,30,60,.15);
+}
+
+
+/* =========================================
+   ABOUT PAGE — GENERAL SECTIONS
+========================================= */
+
+.journey-section,
+.achievements-section,
+.certificates-section,
+.beyond-section{
+    padding:95px 8%;
+}
+
+.journey-section,
+.certificates-section{
+    background:#f7f8fc;
+}
+
+.section-heading{
+    max-width:760px;
+    margin:0 auto 50px;
+
+    text-align:center;
+}
+
+.section-label{
+    margin:0 0 10px;
+
+    color:#3155d9;
+
+    font-size:11px;
+    font-weight:850;
+
+    letter-spacing:1.8px;
+}
+
+.section-heading h2{
+    margin:0 0 17px;
+
+    color:#172033;
+
+    font-size:clamp(32px,4vw,48px);
+    line-height:1.15;
+
+    letter-spacing:-1px;
+}
+
+.section-heading h2 span{
+    color:#3155d9;
+}
+
+.section-intro{
+    max-width:650px;
+    margin:auto;
+
+    color:#737d8e;
+
+    font-size:15px;
+    line-height:1.8;
+}
+
+
+/* =========================================
+   MY JOURNEY
+========================================= */
+
+.journey-timeline{
+    max-width:900px;
+    margin:auto;
+
+    position:relative;
+}
+
+.journey-timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:115px;
+    top:10px;
+    bottom:10px;
+
+    width:2px;
+
+    background:#dce2f1;
+}
+
+.journey-item{
+    position:relative;
+
+    display:grid;
+    grid-template-columns:90px 1fr;
+
+    gap:55px;
+
+    margin-bottom:35px;
+}
+
+.journey-item:last-child{
+    margin-bottom:0;
+}
+
+.journey-year{
+    position:relative;
+    z-index:2;
+
+    padding-top:3px;
+
+    color:#3155d9;
+
+    font-size:11px;
+    font-weight:850;
+
+    letter-spacing:1px;
+
+    text-align:right;
+}
+
+.journey-content{
+    position:relative;
+
+    padding:22px 25px;
+
+    background:#ffffff;
+
+    border:1px solid #e5e8f0;
+
+    border-radius:17px;
+
+    box-shadow:0 8px 25px rgba(20,30,60,.05);
+}
+
+.journey-content::before{
+    content:"";
+
+    position:absolute;
+
+    left:-64px;
+    top:26px;
+
+    width:11px;
+    height:11px;
+
+    background:#3155d9;
+
+    border:4px solid #f7f8fc;
+
+    border-radius:50%;
+}
+
+.journey-content h3{
+    margin:0 0 8px;
+
+    color:#172033;
+
+    font-size:18px;
+}
+
+.journey-content p{
+    margin:0;
+
+    color:#737d8e;
+
+    font-size:13px;
+    line-height:1.75;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+.achievements-grid{
+    max-width:1050px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.achievement-card{
+    padding:28px;
+
+    background:#ffffff;
+
+    border:1px solid #e3e7ef;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(20,30,60,.06);
+
+    transition:.3s ease;
+}
+
+.achievement-card:hover{
+    transform:translateY(-6px);
+
+    border-color:#cfd8ff;
+
+    box-shadow:0 18px 40px rgba(20,30,60,.10);
+}
+
+.achievement-icon{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    background:#eef2ff;
+
+    border-radius:14px;
+
+    font-size:21px;
+}
+
+.achievement-type{
+    color:#3155d9;
+
+    font-size:10px;
+    font-weight:850;
+
+    letter-spacing:1.3px;
+}
+
+.achievement-content h3{
+    margin:8px 0 10px;
+
+    color:#172033;
+
+    font-size:18px;
+    line-height:1.35;
+}
+
+.achievement-content p{
+    margin:0;
+
+    color:#737d8e;
+
+    font-size:13px;
+    line-height:1.75;
+}
+
+.achievement-year{
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:5px 9px;
+
+    background:#f1f3f8;
+
+    color:#687386;
+
+    border-radius:7px;
+
+    font-size:10px;
+    font-weight:800;
+}
+
+
+/* =========================================
+   CERTIFICATES
+========================================= */
+
+.certificates-grid{
+    max-width:1050px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.certificate-card{
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border:1px solid #e3e7ef;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(20,30,60,.06);
+
+    transition:.3s ease;
+}
+
+.certificate-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(20,30,60,.10);
+}
+
+.certificate-image{
+    height:220px;
+
+    background:#eef1f7;
+
+    overflow:hidden;
+}
+
+.certificate-image img{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.certificate-placeholder{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#8a94a7;
+
+    font-size:11px;
+    font-weight:850;
+
+    letter-spacing:1px;
+}
+
+.certificate-info{
+    padding:22px;
+}
+
+.certificate-info > span{
+    color:#3155d9;
+
+    font-size:10px;
+    font-weight:850;
+
+    letter-spacing:1px;
+}
+
+.certificate-info h3{
+    margin:8px 0;
+
+    color:#172033;
+
+    font-size:17px;
+}
+
+.certificate-info p{
+    margin:0 0 14px;
+
+    color:#737d8e;
+
+    font-size:12px;
+    line-height:1.65;
+}
+
+.certificate-info a{
+    color:#3155d9;
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:800;
+}
+
+.certificate-info a:hover{
+    text-decoration:underline;
+}
+
+.certificates-more{
+    max-width:1050px;
+    margin:25px auto 0;
+
+    text-align:center;
+
+    color:#8a94a7;
+
+    font-size:12px;
+}
+
+
+/* =========================================
+   BEYOND ACADEMICS
+========================================= */
+
+.beyond-grid{
+    max-width:1050px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+}
+
+.beyond-card{
+    padding:27px 22px;
+
+    background:#ffffff;
+
+    border:1px solid #e3e7ef;
+
+    border-radius:18px;
+
+    transition:.3s ease;
+}
+
+.beyond-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#cfd8ff;
+}
+
+.beyond-number{
+    margin-bottom:22px;
+
+    color:#3155d9;
+
+    font-size:11px;
+    font-weight:850;
+
+    letter-spacing:1px;
+}
+
+.beyond-card h3{
+    margin:0 0 9px;
+
+    color:#172033;
+
+    font-size:17px;
+}
+
+.beyond-card p{
+    margin:0;
+
+    color:#737d8e;
+
+    font-size:12px;
+    line-height:1.75;
+}
+
+
+/* =========================================
+   ABOUT CONNECT
+========================================= */
+
+.about-connect{
+    padding:95px 8%;
+
+    background:#172033;
+
+    color:#ffffff;
+
+    text-align:center;
+}
+
+.about-connect-content{
+    max-width:650px;
+    margin:auto;
+}
+
+.about-connect .section-label{
+    color:#8fa4ff;
+}
+
+.about-connect h2{
+    margin:10px 0 18px;
+
+    font-size:clamp(32px,4vw,46px);
+
+    line-height:1.15;
+}
+
+.about-connect h2 span{
+    color:#8fa4ff;
+}
+
+.about-connect p:not(.section-label){
+    color:#b5bed0;
+
+    font-size:14px;
+    line-height:1.8;
+}
+
+.about-connect-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:28px;
+}
+
+.about-connect .about-btn.secondary{
+    color:#ffffff;
+
+    background:rgba(255,255,255,.08);
+
+    border-color:rgba(255,255,255,.12);
+}
+
+.about-connect .about-btn.secondary:hover{
+    background:rgba(255,255,255,.14);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:900px){
+
+    .about-hero{
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:45px;
+
+        padding-top:70px;
+    }
+
+    .about-hero-content{
+        margin:auto;
+    }
+
+    .about-hero-text{
+        margin:auto;
+    }
+
+    .about-hero-buttons{
+        justify-content:center;
+    }
+
+    .about-hero-image{
+        order:-1;
+    }
+
+    .achievements-grid,
+    .certificates-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .beyond-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .about-hero{
+        padding:55px 20px 70px;
+    }
+
+    .about-hero h1{
+        letter-spacing:-1.5px;
+    }
+
+    .about-hero h2{
+        font-size:17px;
+    }
+
+    .about-hero-text{
+        font-size:14px;
+    }
+
+    .about-hero-image img{
+        width:270px;
+    }
+
+    .journey-section,
+    .achievements-section,
+    .certificates-section,
+    .beyond-section,
+    .about-connect{
+        padding:70px 20px;
+    }
+
+    .journey-timeline::before{
+        left:8px;
+    }
+
+    .journey-item{
+        display:block;
+
+        padding-left:30px;
+    }
+
+    .journey-year{
+        display:block;
+
+        margin-bottom:10px;
+
+        text-align:left;
+    }
+
+    .journey-content::before{
+        left:-29px;
+        top:22px;
+
+        width:10px;
+        height:10px;
+    }
+
+    .achievements-grid,
+    .certificates-grid,
+    .beyond-grid{
+        grid-template-columns:1fr;
+    }
+
+    .certificate-image{
+        height:210px;
+    }
+
+    .about-connect-buttons{
+        flex-direction:column;
+    }
+
+    .about-connect-buttons .about-btn{
+        width:100%;
+    }
+
+}
