@@ -1,12 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Me | Sariful Islam</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f6f8fc;
+    color:#172033;
+    line-height:1.6;
+}
+
+.about-page-nav{
+    background:#ffffff;
+    border-bottom:1px solid #e5e7eb;
+    padding:16px 7%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.about-logo{
+    text-decoration:none;
+    color:#172033;
+
+    font-size:25px;
+    font-weight:800;
+}
+
+.about-logo span{
+    color:#3155d9;
+}
+
+.about-home{
+    text-decoration:none;
+    color:#3155d9;
+
+    font-size:13px;
+    font-weight:700;
+}
+
+
+/* HERO */
+
+.about-intro{
+    max-width:1100px;
+    margin:auto;
+
+    padding:80px 25px 65px;
+
+    display:grid;
+    grid-template-columns:1fr 320px;
+    align-items:center;
+
+    gap:60px;
+}
+
+.about-label{
+    color:#3155d9;
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:14px;
+}
+
+.about-intro h1{
+    font-size:clamp(42px,6vw,68px);
+
+    line-height:1.05;
+    letter-spacing:-2px;
+
+    margin-bottom:12px;
+}
+
+.about-intro h1 span{
+    color:#3155d9;
+}
+
+.about-role{
+    color:#566176;
+
+    font-size:18px;
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+.about-description{
+    max-width:650px;
+
+    color:#687386;
+
+    font-size:15px;
+    line-height:1.85;
+}
+
+.about-photo img{
+    width:100%;
+    max-width:310px;
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    box-shadow:0 20px 55px rgba(20,30,60,.15);
+}
+
+
+/* SHARED SECTION */
+
+.about-section{
+    padding:90px 7%;
+}
+
+.about-section.alt{
+    background:#ffffff;
+}
+
+.section-heading{
+    max-width:760px;
+    margin:0 auto 45px;
+
+    text-align:center;
+}
+
+.section-label{
+    color:#3155d9;
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:1.8px;
+
+    margin-bottom:10px;
+}
+
+.section-heading h2{
+    font-size:clamp(30px,4vw,44px);
+
+    line-height:1.15;
+
+    margin-bottom:14px;
+}
+
+.section-heading h2 span{
+    color:#3155d9;
+}
+
+.section-heading p{
+    color:#737d8e;
+
+    font-size:14px;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.gallery-card{
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border:1px solid #e3e7ef;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 25px rgba(20,30,60,.06);
+
+    transition:.3s ease;
+}
+
+.gallery-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0 16px 38px rgba(20,30,60,.10);
+}
+
+.gallery-card img{
+    width:100%;
+    height:240px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.gallery-info{
+    padding:16px 18px 18px;
+}
+
+.gallery-info h3{
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+.gallery-info p{
+    color:#7b8495;
+    font-size:12px;
+}
+
+
+/* =========================================
+   CERTIFICATES
+========================================= */
+
+.certificate-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+}
+
+.certificate-card{
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border:1px solid #e3e7ef;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(20,30,60,.07);
+
+    transition:.3s ease;
+}
+
+.certificate-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 42px rgba(20,30,60,.11);
+}
+
+.certificate-card img{
+    width:100%;
+    height:310px;
+
+    display:block;
+    object-fit:cover;
+
+    background:#f4f6fa;
+}
+
+.certificate-content{
+    padding:22px;
+}
+
+.certificate-type{
+    color:#3155d9;
+
+    font-size:10px;
+    font-weight:800;
+
+    letter-spacing:1.3px;
+}
+
+.certificate-content h3{
+    margin:7px 0;
+
+    font-size:18px;
+}
+
+.certificate-content p{
+    color:#737d8e;
+
+    font-size:13px;
+
+    margin-bottom:14px;
+}
+
+.certificate-content a{
+    color:#3155d9;
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:800;
+}
+
+
+/* FOOTER */
+
+.about-footer{
+    padding:35px 20px;
+
+    text-align:center;
+
+    color:#7b8495;
+
+    font-size:12px;
+
+    background:#172033;
+}
+
+.about-footer a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:700;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:800px){
+
+    .about-intro{
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:35px;
+    }
+
+    .about-description{
+        margin:auto;
+    }
+
+    .about-photo{
+        order:-1;
+    }
+
+    .about-photo img{
+        width:260px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .certificate-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:520px){
+
+    .about-page-nav{
+        padding:14px 20px;
+    }
+
+    .about-intro{
+        padding:55px 20px 60px;
+    }
+
+    .about-section{
+        padding:70px 20px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-card img{
+        height:220px;
+    }
+
+    .certificate-card img{
+        height:230px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav class="about-page-nav">
+
+    <a href="index.html" class="about-logo">
+        Sariful<span>.</span>
+    </a>
+
+    <a href="index.html" class="about-home">
+        ← Back to Home
+    </a>
+
+</nav>
+
+
 <!-- =========================================
-     ABOUT PAGE — HERO
+     ABOUT INTRO
 ========================================= -->
 
-<section class="about-hero">
+<section class="about-intro">
 
-    <div class="about-hero-content">
+    <div>
 
-        <p class="section-label">
+        <p class="about-label">
             ABOUT ME
         </p>
 
@@ -14,33 +443,22 @@
             Sariful <span>Islam</span>
         </h1>
 
-        <h2>
+        <p class="about-role">
             Writer • Researcher • Educator
-        </h2>
-
-        <p class="about-hero-text">
-            A student, writer and researcher from Assam,
-            exploring knowledge, culture, education and
-            meaningful ideas through writing, research
-            and creative work.
         </p>
 
-        <div class="about-hero-buttons">
-
-            <a href="#certificates" class="about-btn primary">
-                View Certificates →
-            </a>
-
-            <a href="#contact" class="about-btn secondary">
-                Let's Connect
-            </a>
-
-        </div>
+        <p class="about-description">
+            I am a student, writer and researcher from Assam,
+            interested in education, culture, research,
+            literature and meaningful ideas. This page highlights
+            some of the programs, competitions and experiences
+            that have been part of my journey.
+        </p>
 
     </div>
 
 
-    <div class="about-hero-image">
+    <div class="about-photo">
 
         <img
             src="sariful.jpg.jpeg"
@@ -48,321 +466,164 @@
         >
 
     </div>
-    <!-- =========================================
-     MY JOURNEY
-========================================= -->
-
-<section class="journey-section">
-
-    <div class="section-heading">
-
-        <p class="section-label">
-            MY JOURNEY
-        </p>
-
-        <h2>
-            A journey of
-            <span>learning & growth.</span>
-        </h2>
-
-        <p class="section-intro">
-            From education to writing and research, each
-            stage of my journey has shaped the person
-            and thinker I am becoming.
-        </p>
-
-    </div>
-
-
-    <div class="journey-timeline">
-
-
-        <div class="journey-item">
-
-            <span class="journey-year">
-                EDUCATION
-            </span>
-
-            <div class="journey-content">
-
-                <h3>
-                    Academic Journey
-                </h3>
-
-                <p>
-                    Pursuing my undergraduate studies while
-                    developing a deeper interest in science,
-                    education, writing and research.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="journey-item">
-
-            <span class="journey-year">
-                WRITING
-            </span>
-
-            <div class="journey-content">
-
-                <h3>
-                    From Ideas to Words
-                </h3>
-
-                <p>
-                    Writing books, articles and poems as a way
-                    to express ideas, experiences, questions
-                    and perspectives.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="journey-item">
-
-            <span class="journey-year">
-                RESEARCH
-            </span>
-
-            <div class="journey-content">
-
-                <h3>
-                    Exploring Meaningful Questions
-                </h3>
-
-                <p>
-                    Exploring research related to culture,
-                    digitalization, education and society,
-                    with a focus on meaningful academic work.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="journey-item">
-
-            <span class="journey-year">
-                BEYOND ACADEMICS
-            </span>
-
-            <div class="journey-content">
-
-                <h3>
-                    Learning Beyond the Classroom
-                </h3>
-
-                <p>
-                    Participating in competitions, debates,
-                    educational programs and other
-                    extracurricular activities.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
 
 </section>
+
+
 <!-- =========================================
-     ACHIEVEMENTS & PARTICIPATION
+     GALLERY
 ========================================= -->
 
-<section class="achievements-section">
+<section class="about-section alt">
 
     <div class="section-heading">
 
         <p class="section-label">
-            ACHIEVEMENTS & PARTICIPATION
+            GALLERY
         </p>
 
         <h2>
-            Experiences that
-            <span>shaped me.</span>
+            Moments from my
+            <span>journey.</span>
         </h2>
 
-        <p class="section-intro">
-            A few meaningful competitions, programs and
-            experiences that have contributed to my
-            academic and personal growth.
+        <p>
+            Photos from academic programs, competitions,
+            events and other meaningful experiences.
         </p>
 
     </div>
 
 
-    <div class="achievements-grid">
+    <div class="gallery-grid">
 
 
-        <!-- Achievement 1 -->
+        <article class="gallery-card">
 
-        <article class="achievement-card">
+            <img
+                src="gallery/program-1.jpg"
+                alt="Program Highlight"
+            >
 
-            <div class="achievement-icon">
-                🏆
-            </div>
-
-            <div class="achievement-content">
-
-                <span class="achievement-type">
-                    NATIONAL LEVEL
-                </span>
+            <div class="gallery-info">
 
                 <h3>
-                    Bharat Budget Quest 2026
+                    Program Highlight
                 </h3>
 
                 <p>
-                    Participated in Bharat Budget Quest 2026
-                    at the national level, gaining valuable
-                    experience in understanding and engaging
-                    with India's economic and budgetary ideas.
+                    Academic & extracurricular experience
                 </p>
-
-                <span class="achievement-year">
-                    2026
-                </span>
 
             </div>
 
         </article>
 
 
-        <!-- Achievement 2 -->
+        <article class="gallery-card">
 
-        <article class="achievement-card">
+            <img
+                src="gallery/program-2.jpg"
+                alt="Competition Highlight"
+            >
 
-            <div class="achievement-icon">
-                🎤
-            </div>
-
-            <div class="achievement-content">
-
-                <span class="achievement-type">
-                    DEBATE
-                </span>
+            <div class="gallery-info">
 
                 <h3>
-                    Debate Competition
+                    Competition & Participation
                 </h3>
 
                 <p>
-                    Participated in debate activities that
-                    helped develop public speaking, critical
-                    thinking, confidence and the ability to
-                    present ideas clearly.
+                    Learning beyond the classroom
                 </p>
-
-                <span class="achievement-year">
-                    Participation
-                </span>
 
             </div>
 
         </article>
 
 
-        <!-- Achievement 3 -->
+        <article class="gallery-card">
 
-        <article class="achievement-card">
+            <img
+                src="gallery/program-3.jpg"
+                alt="Academic Event"
+            >
 
-            <div class="achievement-icon">
-                📚
-            </div>
-
-            <div class="achievement-content">
-
-                <span class="achievement-type">
-                    ACADEMIC & EXTRACURRICULAR
-                </span>
+            <div class="gallery-info">
 
                 <h3>
-                    Learning Beyond the Classroom
+                    Academic Event
                 </h3>
 
                 <p>
-                    Taking part in academic programs,
-                    competitions and extracurricular
-                    activities to develop knowledge,
-                    communication and practical skills.
+                    Moments, people and experiences
                 </p>
-
-                <span class="achievement-year">
-                    Ongoing
-                </span>
 
             </div>
 
         </article>
+
 
     </div>
 
 </section>
-</section>
+
+
 <!-- =========================================
-     CERTIFICATES & HIGHLIGHTS
+     COMPETITIONS & CERTIFICATES
 ========================================= -->
 
-<section class="certificates-section" id="certificates">
+<section class="about-section">
 
     <div class="section-heading">
 
         <p class="section-label">
-            CERTIFICATES & HIGHLIGHTS
+            COMPETITIONS & CERTIFICATES
         </p>
 
         <h2>
-            Proof of
-            <span>participation.</span>
+            Participation &
+            <span>recognition.</span>
         </h2>
 
-        <p class="section-intro">
-            A selection of certificates and recognitions
-            from academic, competitive and extracurricular
-            activities.
+        <p>
+            Certificates from competitions, national programs,
+            quizzes and other academic or extracurricular activities.
         </p>
 
     </div>
 
 
-    <div class="certificates-grid">
+    <div class="certificate-grid">
 
 
         <!-- Certificate 1 -->
 
         <article class="certificate-card">
 
-            <div class="certificate-image">
+            <img
+                src="certificates/tb-mukt-bharat-quiz-2026.png"
+                alt="TB Mukt Bharat Quiz Certificate"
+            >
 
-                <img
-                    src="certificates/bharat-budget-quest-2026.jpg"
-                    alt="Bharat Budget Quest 2026 Certificate"
-                >
+            <div class="certificate-content">
 
-            </div>
-
-            <div class="certificate-info">
-
-                <span>
-                    2026 · NATIONAL LEVEL
+                <span class="certificate-type">
+                    MYBHARAT · 2026
                 </span>
 
                 <h3>
-                    Bharat Budget Quest 2026
+                    Quiz on TB Mukt Bharat Abhiyan
                 </h3>
 
                 <p>
-                    National-level participation certificate.
+                    Certificate of participation issued through
+                    MYBharat under the Ministry of Youth Affairs
+                    & Sports.
                 </p>
 
                 <a
-                    href="certificates/bharat-budget-quest-2026.jpg"
+                    href="certificates/tb-mukt-bharat-quiz-2026.png"
                     target="_blank"
                 >
                     View Certificate ↗
@@ -377,32 +638,29 @@
 
         <article class="certificate-card">
 
-            <div class="certificate-image">
+            <img
+                src="certificates/ocean-science-viksit-bharat-quiz-2026.png"
+                alt="Ocean Science For Viksit Bharat Quiz Certificate"
+            >
 
-                <img
-                    src="certificates/debate-competition.jpg"
-                    alt="Debate Competition Certificate"
-                >
+            <div class="certificate-content">
 
-            </div>
-
-            <div class="certificate-info">
-
-                <span>
-                    DEBATE · PARTICIPATION
+                <span class="certificate-type">
+                    MYBHARAT · 2026
                 </span>
 
                 <h3>
-                    Debate Competition
+                    Ocean Science For Viksit Bharat Quiz
                 </h3>
 
                 <p>
-                    Certificate of participation and
-                    extracurricular achievement.
+                    Certificate of participation issued through
+                    MYBharat under the Ministry of Youth Affairs
+                    & Sports.
                 </p>
 
                 <a
-                    href="certificates/debate-competition.jpg"
+                    href="certificates/ocean-science-viksit-bharat-quiz-2026.png"
                     target="_blank"
                 >
                     View Certificate ↗
@@ -413,195 +671,22 @@
         </article>
 
 
-        <!-- Certificate 3 -->
-
-        <article class="certificate-card">
-
-            <div class="certificate-image certificate-placeholder">
-
-                <span>
-                    ADD CERTIFICATE
-                </span>
-
-            </div>
-
-            <div class="certificate-info">
-
-                <span>
-                    UPCOMING
-                </span>
-
-                <h3>
-                    More Highlights
-                </h3>
-
-                <p>
-                    More certificates and achievements
-                    will be added here.
-                </p>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-
-    <div class="certificates-more">
-
-        <p>
-            More certificates will be added as my journey continues.
-        </p>
-
     </div>
 
 </section>
-<!-- =========================================
-     BEYOND ACADEMICS
-========================================= -->
-
-<section class="beyond-section">
-
-    <div class="section-heading">
-
-        <p class="section-label">
-            BEYOND ACADEMICS
-        </p>
-
-        <h2>
-            Learning doesn't
-            <span>stop at the classroom.</span>
-        </h2>
-
-        <p class="section-intro">
-            Experiences beyond formal education that continue
-            to shape my skills, interests and perspective.
-        </p>
-
-    </div>
 
 
-    <div class="beyond-grid">
+<!-- FOOTER -->
 
-        <article class="beyond-card">
+<footer class="about-footer">
 
-            <div class="beyond-number">
-                01
-            </div>
+    <p>
+        © 2026 Sariful Islam ·
+        <a href="index.html">Return to Website</a>
+    </p>
 
-            <h3>
-                Writing
-            </h3>
-
-            <p>
-                Writing books, articles and poems to express
-                ideas, experiences and perspectives.
-            </p>
-
-        </article>
+</footer>
 
 
-        <article class="beyond-card">
-
-            <div class="beyond-number">
-                02
-            </div>
-
-            <h3>
-                Debate & Public Speaking
-            </h3>
-
-            <p>
-                Developing communication, critical thinking
-                and confidence through debate and speaking
-                activities.
-            </p>
-
-        </article>
-
-
-        <article class="beyond-card">
-
-            <div class="beyond-number">
-                03
-            </div>
-
-            <h3>
-                Research
-            </h3>
-
-            <p>
-                Exploring questions related to culture,
-                education, technology and society through
-                research and academic work.
-            </p>
-
-        </article>
-
-
-        <article class="beyond-card">
-
-            <div class="beyond-number">
-                04
-            </div>
-
-            <h3>
-                Continuous Learning
-            </h3>
-
-            <p>
-                Exploring new ideas, skills, technologies and
-                opportunities that contribute to personal and
-                academic growth.
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-<!-- =========================================
-     LET'S CONNECT
-========================================= -->
-
-<section class="about-connect" id="contact">
-
-    <div class="about-connect-content">
-
-        <p class="section-label">
-            LET'S CONNECT
-        </p>
-
-        <h2>
-            Interested in my
-            <span>work?</span>
-        </h2>
-
-        <p>
-            Feel free to connect with me for research,
-            collaboration, writing, education, or meaningful
-            conversations.
-        </p>
-
-        <div class="about-connect-buttons">
-
-            <a
-                href="mailto:sarifulislam00835@gmail.com"
-                class="about-btn primary"
-            >
-                Send an Email →
-            </a>
-
-            <a
-                href="index.html#contact"
-                class="about-btn secondary"
-            >
-                Contact Page
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+</body>
+</html>
