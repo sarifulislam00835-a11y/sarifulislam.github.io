@@ -1,1 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Program Highlights | Sariful Islam</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f8fc;
+            color: #172033;
+        }
+
+        /* Header */
+        .topbar {
+            background: #ffffff;
+            border-bottom: 1px solid #e7e9ef;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #3156c8;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* Hero */
+        .gallery-hero {
+            padding: 70px 7% 45px;
+            text-align: center;
+        }
+
+        .gallery-label {
+            color: #3156c8;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .gallery-hero h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .gallery-hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #737d8e;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 25px 80px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .gallery-card {
+            background: #ffffff;
+            border: 1px solid #e8eaf0;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-info {
+            padding: 18px;
+        }
+
+        .card-info h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .card-info p {
+            color: #737d8e;
+            font-size: 12.5px;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .view-photo {
+            color: #3156c8;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #ffffff;
+            border-top: 1px solid #e7e9ef;
+            color: #7c8493;
+            font-size: 12px;
+        }
+
+        @media (max-width: 800px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-hero h1 {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .topbar {
+                padding: 17px 5%;
+            }
+
+            .gallery-hero {
+                padding: 50px 6% 30px;
+            }
+
+            .gallery-hero h1 {
+                font-size: 29px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                padding: 15px 18px 60px;
+            }
+
+            .gallery-card img {
+                height: auto;
+                aspect-ratio: 4 / 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">Sariful.</div>
+    <a href="about.html" class="back-link">← Back to About</a>
+</header>
+
+
+<section class="gallery-hero">
+
+    <div class="gallery-label">
+        PROGRAMS & EVENTS
+    </div>
+
+    <h1>Program Highlights</h1>
+
+    <p>
+        Selected moments from academic programmes, youth events,
+        institutional activities and meaningful experiences.
+    </p>
+
+</section>
+
+
+<main class="gallery-grid">
+
+    <!-- PHOTO 05 -->
+    <article class="gallery-card">
+
+        <img
+            src="gallery/gallery-05.jpg.jpeg"
+            alt="4th Inter College Youth Festival Closing Ceremony"
+        >
+
+        <div class="card-info">
+
+            <h3>4th Inter College Youth Festival</h3>
+
+            <p>
+                A memorable moment from the closing ceremony of the
+                4th Inter College Youth Festival at Jwhwlao Nileswar
+                Brahma Auditorium, Bodoland University.
+            </p>
+
+            <a
+                href="gallery/gallery-05.jpg.jpeg"
+                target="_blank"
+                class="view-photo"
+            >
+                View Photo ↗
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- PHOTO 02 -->
+    <article class="gallery-card">
+
+        <img
+            src="gallery/gallery-02.jpg.jpeg"
+            alt="Field Visit to KVK Telipara"
+        >
+
+        <div class="card-info">
+
+            <h3>Field Visit to KVK, Telipara</h3>
+
+            <p>
+                A memorable moment with friends during an academic
+                field visit to Krishi Vigyan Kendra (KVK), Telipara.
+            </p>
+
+            <a
+                href="gallery/gallery-02.jpg.jpeg"
+                target="_blank"
+                class="view-photo"
+            >
+                View Photo ↗
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- PHOTO 01 -->
+    <article class="gallery-card">
+
+        <img
+            src="gallery/gallery-01.jpg.jpeg"
+            alt="Teachers' Day Celebration 2025"
+        >
+
+        <div class="card-info">
+
+            <h3>Teachers' Day Celebration 2025</h3>
+
+            <p>
+                A memorable moment from the Teachers' Day Celebration
+                with the Department of Physics at Gossaigaon College.
+            </p>
+
+            <a
+                href="gallery/gallery-01.jpg.jpeg"
+                target="_blank"
+                class="view-photo"
+            >
+                View Photo ↗
+            </a>
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer>
+    © 2026 Sariful Islam. All rights reserved.
+</footer>
+
+</body>
+</html>
