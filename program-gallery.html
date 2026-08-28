@@ -2,173 +2,243 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Program Highlights | Sariful Islam</title>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Program Highlights | Sariful Islam
+    </title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f7f8fc;
-            color: #172033;
+        :root{
+            --primary:#3155d9;
+            --text:#172033;
+            --muted:#737d8e;
+            --border:#e5e8ef;
+            --light:#f6f8fc;
+            --white:#ffffff;
         }
 
-        /* Header */
-        .topbar {
-            background: #ffffff;
-            border-bottom: 1px solid #e7e9ef;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:var(--light);
+            color:var(--text);
+            line-height:1.6;
         }
 
-        .logo {
-            font-size: 22px;
-            font-weight: 800;
+        .topbar{
+            position:sticky;
+            top:0;
+            z-index:100;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            padding:18px 7%;
+
+            background:rgba(255,255,255,.95);
+            border-bottom:1px solid var(--border);
+
+            backdrop-filter:blur(12px);
         }
 
-        .back-link {
-            text-decoration: none;
-            color: #3156c8;
-            font-size: 13px;
-            font-weight: 700;
+        .logo{
+            color:var(--text);
+            font-size:24px;
+            font-weight:850;
         }
 
-        /* Hero */
-        .gallery-hero {
-            padding: 70px 7% 45px;
-            text-align: center;
+        .logo span{
+            color:var(--primary);
         }
 
-        .gallery-label {
-            color: #3156c8;
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
+        .back-link{
+            color:var(--primary);
+            text-decoration:none;
+            font-size:13px;
+            font-weight:800;
         }
 
-        .gallery-hero h1 {
-            font-size: 42px;
-            margin-bottom: 12px;
+        .gallery-hero{
+            padding:75px 7% 50px;
+            text-align:center;
+
+            background:
+                radial-gradient(
+                    circle at 80% 10%,
+                    rgba(49,85,217,.12),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f8faff,
+                    #ffffff
+                );
+
+            border-bottom:1px solid #e9ecf3;
         }
 
-        .gallery-hero p {
-            max-width: 650px;
-            margin: auto;
-            color: #737d8e;
-            font-size: 14px;
-            line-height: 1.7;
+        .gallery-label{
+            margin-bottom:10px;
+            color:var(--primary);
+            font-size:10px;
+            font-weight:850;
+            letter-spacing:2px;
         }
 
-        /* Gallery */
-        .gallery-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px 25px 80px;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+        .gallery-hero h1{
+            margin-bottom:12px;
+            font-size:clamp(34px,5vw,50px);
+            line-height:1.1;
         }
 
-        .gallery-card {
-            background: #ffffff;
-            border: 1px solid #e8eaf0;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        .gallery-hero p{
+            max-width:650px;
+            margin:auto;
+            color:var(--muted);
+            font-size:14px;
+            line-height:1.8;
         }
 
-        .gallery-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
+        .gallery-grid{
+            max-width:1100px;
+            margin:0 auto;
+            padding:55px 25px 85px;
+
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:24px;
         }
 
-        .card-info {
-            padding: 18px;
+        .gallery-card{
+            overflow:hidden;
+            background:var(--white);
+
+            border:1px solid var(--border);
+            border-radius:20px;
+
+            box-shadow:
+                0 10px 30px rgba(20,30,60,.07);
+
+            transition:.3s ease;
         }
 
-        .card-info h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
+        .gallery-card:hover{
+            transform:translateY(-5px);
+
+            box-shadow:
+                0 18px 42px rgba(20,30,60,.11);
         }
 
-        .card-info p {
-            color: #737d8e;
-            font-size: 12.5px;
-            line-height: 1.6;
-            margin-bottom: 14px;
+        .gallery-card img{
+            width:100%;
+            height:250px;
+            display:block;
+            object-fit:cover;
         }
 
-        .view-photo {
-            color: #3156c8;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: 800;
+        .card-info{
+            padding:19px;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            background: #ffffff;
-            border-top: 1px solid #e7e9ef;
-            color: #7c8493;
-            font-size: 12px;
+        .card-info h3{
+            margin-bottom:8px;
+            color:var(--text);
+            font-size:16px;
+            line-height:1.4;
         }
 
-        @media (max-width: 800px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
+        .card-info p{
+            margin-bottom:14px;
+            color:var(--muted);
+            font-size:12.5px;
+            line-height:1.7;
+        }
+
+        .view-photo{
+            color:var(--primary);
+            text-decoration:none;
+            font-size:12px;
+            font-weight:850;
+        }
+
+        .view-photo:hover{
+            text-decoration:underline;
+        }
+
+        footer{
+            padding:32px 20px;
+            text-align:center;
+
+            background:#ffffff;
+            border-top:1px solid var(--border);
+
+            color:#7c8493;
+            font-size:12px;
+        }
+
+        @media(max-width:850px){
+
+            .gallery-grid{
+                grid-template-columns:repeat(2,1fr);
             }
 
-            .gallery-hero h1 {
-                font-size: 34px;
-            }
         }
 
-        @media (max-width: 550px) {
-            .topbar {
-                padding: 17px 5%;
+        @media(max-width:600px){
+
+            .topbar{
+                padding:16px 20px;
             }
 
-            .gallery-hero {
-                padding: 50px 6% 30px;
+            .gallery-hero{
+                padding:55px 20px 38px;
             }
 
-            .gallery-hero h1 {
-                font-size: 29px;
+            .gallery-grid{
+                grid-template-columns:1fr;
+                padding:35px 18px 65px;
             }
 
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                padding: 15px 18px 60px;
+            .gallery-card img{
+                height:auto;
+                aspect-ratio:4/3;
             }
 
-            .gallery-card img {
-                height: auto;
-                aspect-ratio: 4 / 3;
-            }
         }
+
     </style>
+
 </head>
 
 <body>
 
 <header class="topbar">
-    <div class="logo">Sariful.</div>
-    <a href="about.html" class="back-link">← Back to About</a>
+
+    <div class="logo">
+        Sariful<span>.</span>
+    </div>
+
+    <a
+        href="about.html"
+        class="back-link"
+    >
+        ← Back to About
+    </a>
+
 </header>
 
 
@@ -178,49 +248,58 @@
         PROGRAMS & EVENTS
     </div>
 
-    <h1>Program Highlights</h1>
+    <h1>
+        Program Highlights
+    </h1>
 
     <p>
-        Selected moments from academic programmes, youth events,
-        institutional activities and meaningful experiences.
+        A collection of memorable moments from youth programmes,
+        academic activities, institutional events, field visits
+        and other meaningful experiences.
     </p>
 
 </section>
 
 
 <main class="gallery-grid">
-    
-<div class="category-photo">
 
-    <img
-        src="gallery/gallery-06.jpg.jpeg"
-        alt="4th Inter College Youth Festival Closing Ceremony"
-    >
 
-    <div class="photo-info">
+    <!-- PHOTO 06 -->
 
-        <h4>
-            4th Inter College Youth Festival
-        </h4>
+    <article class="gallery-card">
 
-        <p>
-            A memorable moment from the closing ceremony of the
-            4th Inter College Youth Festival at Jwhwlao Nileswar
-            Brahma Auditorium, Bodoland University.
-        </p>
-
-        <a
-            href="gallery/gallery-05.jpg.jpeg"
-            target="_blank"
-            class="gallery-view"
+        <img
+            src="gallery/gallery-06.jpg.jpeg"
+            alt="4th Inter College Youth Festival at Bodoland University"
         >
-            View Photo ↗
-        </a>
 
-    </div>
+        <div class="card-info">
 
-</div>
+            <h3>
+                4th Inter College Youth Festival
+            </h3>
+
+            <p>
+                A memorable moment from the 4th Inter College
+                Youth Festival at Bodoland University,
+                representing Gossaigaon College.
+            </p>
+
+            <a
+                href="gallery/gallery-06.jpg.jpeg"
+                target="_blank"
+                class="view-photo"
+            >
+                View Photo ↗
+            </a>
+
+        </div>
+
+    </article>
+
+
     <!-- PHOTO 05 -->
+
     <article class="gallery-card">
 
         <img
@@ -230,12 +309,15 @@
 
         <div class="card-info">
 
-            <h3>4th Inter College Youth Festival</h3>
+            <h3>
+                Youth Festival Closing Ceremony
+            </h3>
 
             <p>
-                A memorable moment from the closing ceremony of the
-                4th Inter College Youth Festival at Jwhwlao Nileswar
-                Brahma Auditorium, Bodoland University.
+                A memorable moment from the closing ceremony
+                of the 4th Inter College Youth Festival at
+                Jwhwlao Nileswar Brahma Auditorium,
+                Bodoland University.
             </p>
 
             <a
@@ -252,6 +334,7 @@
 
 
     <!-- PHOTO 02 -->
+
     <article class="gallery-card">
 
         <img
@@ -261,11 +344,14 @@
 
         <div class="card-info">
 
-            <h3>Field Visit to KVK, Telipara</h3>
+            <h3>
+                Field Visit to KVK, Telipara
+            </h3>
 
             <p>
-                A memorable moment with friends during an academic
-                field visit to Krishi Vigyan Kendra (KVK), Telipara.
+                A memorable moment with friends during an
+                academic field visit to Krishi Vigyan Kendra
+                (KVK), Telipara.
             </p>
 
             <a
@@ -282,6 +368,7 @@
 
 
     <!-- PHOTO 01 -->
+
     <article class="gallery-card">
 
         <img
@@ -291,11 +378,14 @@
 
         <div class="card-info">
 
-            <h3>Teachers' Day Celebration 2025</h3>
+            <h3>
+                Teachers' Day Celebration 2025
+            </h3>
 
             <p>
-                A memorable moment from the Teachers' Day Celebration
-                with the Department of Physics at Gossaigaon College.
+                A memorable moment from the Teachers' Day
+                Celebration 2025 with the Department of Physics
+                at Gossaigaon College.
             </p>
 
             <a
@@ -309,6 +399,7 @@
         </div>
 
     </article>
+
 
 </main>
 
